@@ -1,0 +1,17 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdnjs.cloudflare.com https://www.gstatic.com https://www.google.com https://apis.google.com https://static.cloudflareinsights.com https://challenges.cloudflare.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https:; connect-src 'self' https: wss:; media-src 'self' blob:; font-src 'self' data: https://fonts.gstatic.com; frame-src https://www.google.com https://apis.google.com https://accounts.google.com https://challenges.cloudflare.com; frame-ancestors 'none';
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Permissions-Policy: camera=(), microphone=(self), geolocation=()
+
+/_worker.js
+  Cache-Control: no-store, no-cache, must-revalidate
+
+/auth/*
+  Cache-Control: no-store, no-cache, must-revalidate
+
+/script.js
+  Cache-Control: no-store, no-cache, must-revalidate
+
+/index.html
+  Cache-Control: no-store, no-cache, must-revalidate

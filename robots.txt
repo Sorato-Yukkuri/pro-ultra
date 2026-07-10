@@ -1,6 +1,48 @@
+# 精密デバイス診断 Pro Ultra - robots.txt
+
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /.git/
 
+# 検索エンジンクローラー
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI/LLMクローラー（明示的に許可）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# サイトマップ
 Sitemap: https://pro-ultra.pages.dev/sitemap.xml
+
+# llms.txt（AIクローラー向け要約）
+# https://pro-ultra.pages.dev/llms.txt

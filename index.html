@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="msvalidate.01" content="66FA93E2080D368B55B5719CC94FE42B" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="スマートフォン・PC・タブレットの処理速度、バッテリー性能などを精密診断。Pro Ultraアカウントなら診断結果を最大30個保存でき、週間ランキングに参加できます。">
     <link rel="manifest" href="manifest.json">
@@ -28,6 +29,82 @@
     <meta name="twitter:title" content="精密デバイス診断 Pro Ultra">
     <meta name="twitter:description" content="スマートフォン・PC・タブレットの処理速度、バッテリー性能などを精密診断。">
     <meta name="twitter:image" content="https://pro-ultra.pages.dev/icon-512.png">
+    <meta name="keywords" content="デバイス診断,スマホ診断,PC性能診断,ベンチマーク,CPU診断,GPU診断,バッテリー診断,FPS測定,動作確認,処理速度測定,デバイス性能チェック,無料診断ツール">
+    <link rel="canonical" href="https://pro-ultra.pages.dev/">
+
+    <!-- 構造化データ: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "精密デバイス診断 Pro Ultra",
+      "alternateName": ["Pro Ultra", "デバイス診断Pro Ultra", "サクサク度診断"],
+      "url": "https://pro-ultra.pages.dev/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web, iOS, Android, Windows, macOS, ChromeOS",
+      "description": "スマートフォン・PC・タブレットのCPU、GPU、メモリ、ネットワーク、バッテリー性能をブラウザ上で精密診断できる無料Webアプリ。診断結果はS〜Dランクで表示され、AIアドバイザーが改善方法を提案。診断履歴の保存、週間ランキング、グループ機能（親友コード）にも対応。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      },
+      "featureList": [
+        "CPU/GPU/メモリベンチマーク診断",
+        "FPS・フレームレート測定",
+        "バッテリードレインテスト",
+        "ネットワーク（Ping/Jitter）測定",
+        "AIアドバイザーによる診断結果の相談",
+        "診断結果のS〜Dランク評価",
+        "診断履歴の保存・比較",
+        "週間ランキング機能",
+        "グループ機能（親友コード）"
+      ],
+      "screenshot": "https://pro-ultra.pages.dev/icon-512.png"
+    }
+    </script>
+
+    <!-- 構造化データ: FAQPage（AI検索・AIモード向け） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "精密デバイス診断 Pro Ultraとは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "精密デバイス診断 Pro Ultraは、スマートフォン・PC・タブレットの処理性能（CPU、GPU、メモリ、FPS、ネットワーク、バッテリー）をブラウザだけで無料診断できるWebアプリです。診断結果はS・A・B・C・Dの5段階ランクで表示され、AIアドバイザーに改善方法を相談できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "精密デバイス診断 Pro Ultraはアプリのインストールが必要ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ、インストール不要です。https://pro-ultra.pages.dev/ にブラウザでアクセスするだけで、その場でデバイス診断を開始できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "デバイスのランク（S・A・B・C・D）はどう決まりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CPU性能、GPU性能、メモリ容量、実測FPS、ネットワーク応答速度を総合スコア化し、Sランク（最高性能）からDランク（旧型環境）まで5段階で評価します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "無料で使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "基本的な診断機能は無料で利用できます。Pro Ultraアカウント（無料登録）を作成すると診断履歴の保存やランキング参加など、さらに多くの機能が使えます。"
+          }
+        }
+      ]
+    }
+    </script>
+
 
     <!-- 検索エンジン向け構造化データ -->
     <script type="application/ld+json">
@@ -44,10 +121,11 @@
     </script>
     <link rel="canonical" href="https://pro-ultra.pages.dev/">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.9.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.9.0/firebase-firestore-compat.js"></script>
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -62,24 +140,24 @@
 
 
 <!-- ログインバー（capture-area外） -->
-<div id="auth-bar" style="display:none;position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(5,5,5,0.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1e1e1e;padding:8px 16px;align-items:center;justify-content:space-between;box-sizing:border-box;">
+<div id="auth-bar" style="display:none;position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:8px 16px;align-items:center;justify-content:space-between;box-sizing:border-box;">
     <div id="auth-user-info" style="display:flex;align-items:center;gap:8px;min-width:0;flex:1;overflow:hidden;">
         <img id="auth-avatar" src="" style="width:26px;height:26px;border-radius:50%;display:none;flex-shrink:0;">
-        <span id="auth-username" style="color:#fff;font-size:0.85rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px;"></span>
+        <span id="auth-username" style="font-size:0.85rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px;"></span>
         <span id="pu-header-badge"></span>
-        <span id="pu-equipped-badge" style="display:none;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);font-size:0.85rem;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;" onclick="openBadgeManager()" title="バッジ管理"></span>
+        <span id="pu-equipped-badge" style="display:none;width:24px;height:24px;border-radius:50%;background:rgba(128,128,128,0.12);border:1px solid rgba(128,128,128,0.2);font-size:0.85rem;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;" onclick="openBadgeManager()" title="バッジ管理"></span>
         <span id="auth-sync-status" style="color:#34c759;font-size:0.72rem;flex-shrink:0;"></span>
     </div>
     <div style="display:flex;gap:6px;align-items:center;flex-shrink:0;">
-        <button id="auth-logout-btn" onclick="signOut()" style="display:none;background:rgba(255,59,48,0.12);border:1px solid rgba(255,59,48,0.25);color:#ff6b6b;padding:5px 12px;border-radius:9px;font-size:0.78rem;font-weight:700;cursor:pointer;">ログアウト</button>
-        <button id="notif-btn" onclick="toggleNotifCenter()" style="display:none;position:relative;background:rgba(255,255,255,0.06);border:1px solid #222;color:#fff;width:32px;height:32px;border-radius:9px;font-size:0.9rem;cursor:pointer;align-items:center;justify-content:center;">
-            🔔
+        <button id="auth-logout-btn" onclick="signOut()" style="display:none;background:rgba(255,59,48,0.12);border:1px solid rgba(255,59,48,0.25);color:#ff6b6b;padding:5px 12px;border-radius:9px;font-size:0.78rem;font-weight:700;cursor:pointer;"><span>ログアウト</span></button>
+        <button id="notif-btn" onclick="toggleNotifCenter()" style="display:none;position:relative;background:rgba(128,128,128,0.1);border:1px solid var(--border);width:32px;height:32px;border-radius:9px;font-size:0.9rem;cursor:pointer;align-items:center;justify-content:center;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
             <span id="notif-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:#ff3b30;color:#fff;font-size:0.58rem;font-weight:900;min-width:15px;height:15px;border-radius:8px;padding:0 3px;line-height:15px;text-align:center;"></span>
         </button>
-        <button id="propass-register-btn" onclick="registerPasskey()" style="display:none;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;padding:5px 11px;border-radius:9px;font-size:0.78rem;font-weight:700;cursor:pointer;">🔑 Pro Pass</button>
+        <button id="propass-register-btn" onclick="registerPasskey()" style="display:none;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;padding:5px 11px;border-radius:9px;font-size:0.78rem;font-weight:700;cursor:pointer;">Pro Pass</button>
         <button id="auth-friend-btn" onclick="openFriendModal()" style="background:linear-gradient(135deg,#ff9500,#ff6b00);color:#fff;border:none;padding:5px 11px;border-radius:9px;font-size:0.78rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;"><svg width="15" height="15" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><g transform="translate(70,70)"><circle cx="-30" cy="-20" r="15" fill="#fff"/><rect x="-43" y="-3" width="24" height="28" rx="7" fill="#fff"/><circle cx="30" cy="-20" r="15" fill="#fff"/><rect x="19" y="-3" width="24" height="28" rx="7" fill="#fff"/><path d="M -18 6 C -10 -12, -4 -18, 0 -6 C 4 -18, 10 -12, 18 6" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M 0 -5 C 0 -16, -12 -20, -12 -10 C -12 -2, 0 6, 0 6 C 0 6, 12 -2, 12 -10 C 12 -20, 0 -16, 0 -5 Z" fill="#ffe000"/><circle cx="0" cy="-7" r="46" fill="none" stroke="#fff" stroke-width="3"/><circle cx="0" cy="-53" r="4" fill="#fff"/><circle cx="37" cy="-36" r="3" fill="#fff"/><circle cx="-37" cy="-36" r="3" fill="#fff"/><circle cx="37" cy="22" r="2.5" fill="#fff" opacity="0.7"/><circle cx="-37" cy="22" r="2.5" fill="#fff" opacity="0.7"/></g></svg> <span id="auth-friend-label">親友</span></button>
-        <button id="auth-login-btn" onclick="openLoginModal()" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;padding:5px 14px;border-radius:9px;font-size:0.82rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;">
-            🔑 <span id="auth-login-label">ログイン</span>
+        <button id="auth-login-btn" onclick="if(!navigator.onLine)return;openLoginModal()" style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;padding:5px 14px;border-radius:9px;font-size:0.82rem;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:5px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> <span id="auth-login-label">ログイン</span>
         </button>
     </div>
 </div>
@@ -87,19 +165,19 @@
 <!-- メール未確認バナー（JS で show/hide） -->
 <div id="email-verify-banner" style="display:none;position:fixed;top:49px;left:0;right:0;z-index:999;background:rgba(245,158,11,0.13);border-bottom:1px solid rgba(245,158,11,0.35);padding:9px 16px;align-items:center;justify-content:space-between;gap:12px;box-sizing:border-box;flex-wrap:wrap;">
     <span style="color:#f59e0b;font-size:0.82rem;font-weight:700;line-height:1.5;">
-        📧 メールアドレスの確認が完了していません。確認メールのリンクをクリックするとProUltra特典が有効になります。<br>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> メールアドレスの確認が完了していません。確認メールのリンクをクリックするとProUltra特典が有効になります。<br>
         <span style="font-size:0.75rem;font-weight:400;color:#c8a060;">※ 迷惑メールフォルダもご確認ください</span>
     </span>
     <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap;">
         <button onclick="resendVerificationEmail()" style="background:rgba(245,158,11,0.2);border:1px solid rgba(245,158,11,0.4);color:#f59e0b;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;">再送する</button>
-        <button onclick="recheckEmailVerified()" style="background:rgba(52,199,89,0.15);border:1px solid rgba(52,199,89,0.3);color:#34c759;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;">確認済み ✓</button>
-        <button onclick="openDeleteAccountModal()" style="background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.3);color:#ff6b6b;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;">🗑 削除して作り直す</button>
+        <button onclick="recheckEmailVerified()" style="background:rgba(52,199,89,0.15);border:1px solid rgba(52,199,89,0.3);color:#34c759;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;">確認済み <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <button onclick="openDeleteAccountModal()" style="background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.3);color:#ff6b6b;padding:5px 12px;border-radius:8px;font-size:0.78rem;font-weight:700;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> 削除して作り直す</button>
     </div>
 </div>
 
 <!-- アップデート通知バナー（メール認証必須化） -->
 <div id="auth-update-banner" style="display:none;position:fixed;top:49px;left:0;right:0;z-index:8998;background:rgba(99,102,241,0.13);border-bottom:1px solid rgba(99,102,241,0.35);padding:9px 16px;align-items:center;justify-content:space-between;gap:12px;box-sizing:border-box;">
-    <span style="color:#a5b4fc;font-size:0.82rem;font-weight:700;">🆕 アップデートによりメール認証が必須になりました。上のバナーから認証を完了してください。</span>
+    <span style="color:#a5b4fc;font-size:0.82rem;font-weight:700;">メール認証が必須です。上のバナーから認証を完了してください。</span>
     <button onclick="document.getElementById('auth-update-banner').style.display='none';localStorage.setItem('pu_upd_banner_v1','1');" style="background:none;border:none;color:#6366f1;font-size:0.82rem;font-weight:700;cursor:pointer;flex-shrink:0;">閉じる ✕</button>
 </div>
 
@@ -107,7 +185,7 @@
 <!-- ログインモーダル -->
 <div id="auth-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:99999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:28px;padding:28px 24px;width:100%;max-width:400px;text-align:center;">
-        <div style="width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 14px;">🔑</div>
+        <div style="width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
         <h2 id="auth-modal-title" style="margin:0 0 4px;font-size:1.2rem;font-weight:900;color:#fff;">ログイン</h2>
         <p id="auth-modal-msg" style="color:#555;font-size:0.82rem;margin:0 0 22px;line-height:1.6;"></p>
 
@@ -129,6 +207,15 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
                 Discord
             </button>
+            <button onclick="signInWithFacebook()" style="padding:12px;border-radius:14px;background:#1877F2;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.023 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.878h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.917 8.437-9.94z"/></svg>
+                Facebook
+            </button>
+            <button onclick="signInWithLine()" style="padding:12px;border-radius:14px;background:#06C755;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.647 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                LINE
+            </button>
+
         </div>
 
         <!-- 区切り -->
@@ -140,24 +227,24 @@
 
         <!-- アカウント作成 / メールログイン（2カラム） -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
-            <button onclick="openSignUpModal()" style="padding:12px;border-radius:14px;background:linear-gradient(135deg,#ff6b35,#ff2d55);color:#fff;border:none;font-size:0.85rem;font-weight:800;cursor:pointer;">✨ アカウント作成</button>
-            <button onclick="openEmailLoginModal()" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.04);color:#888;border:1px solid #2a2a2a;font-size:0.82rem;font-weight:700;cursor:pointer;">⭐️ ProUltraログイン</button>
+            <button onclick="openSignUpModal()" style="padding:12px;border-radius:14px;background:linear-gradient(135deg,#ff6b35,#ff2d55);color:#fff;border:none;font-size:0.85rem;font-weight:800;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> アカウント作成</button>
+            <button onclick="openEmailLoginModal()" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.04);color:#888;border:1px solid #2a2a2a;font-size:0.82rem;font-weight:700;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>️ ProUltraログイン</button>
         </div>
 
         <!-- Pro Pass（パスキー）ログイン -->
         <div id="auth-modal-propass-wrap" style="margin-bottom:8px;">
             <button id="auth-modal-propass-btn" onclick="signInWithPasskey()" style="width:100%;padding:12px;border-radius:14px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;font-size:0.9rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="10" rx="5" ry="5"/><line x1="9" y1="15" x2="9" y2="21"/><line x1="6" y1="18" x2="12" y2="18"/><line x1="17" y1="8" x2="23" y2="8"/><line x1="23" y1="5" x2="23" y2="11"/></svg>
-                🔑 Pro Pass でログイン
+                Pro Pass でログイン
             </button>
         </div>
 
         <!-- 匿名 + キャンセル（2カラム） -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <button onclick="signInAnonymously_app()" style="padding:10px;border-radius:12px;background:transparent;color:#3a3a3a;border:1px solid #1e1e1e;font-size:0.78rem;cursor:pointer;line-height:1.5;" onmouseover="this.style.borderColor='#333';this.style.color='#555'" onmouseout="this.style.borderColor='#1e1e1e';this.style.color='#3a3a3a'">
-                👤 匿名でログイン<br><span style="font-size:0.68rem;opacity:0.6;">※ 同期なし・端末のみ</span>
+            <button onclick="signInAnonymously_app()" style="padding:12px;border-radius:12px;background:#1e1e2e;color:#888;border:1px solid #333;font-size:0.82rem;cursor:pointer;line-height:1.6;font-weight:700;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> 匿名でログイン<br><span style="font-size:0.7rem;color:#555;">同期なし・端末のみ</span>
             </button>
-            <button id="auth-modal-cancel" onclick="_closeAuthModal()" style="padding:10px;border-radius:12px;background:#161616;color:#444;border:1px solid #222;font-size:0.85rem;cursor:pointer;font-weight:700;">キャンセル</button>
+            <button id="auth-modal-cancel" onclick="_closeAuthModal()" style="padding:10px;border-radius:12px;background:#161616;color:#555;border:1px solid #2a2a2a;font-size:0.85rem;cursor:pointer;font-weight:700;">キャンセル</button>
         </div>
     </div>
 </div>
@@ -165,7 +252,7 @@
 <!-- SSO ログインモーダル -->
 <div id="sso-login-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;padding:28px 28px;width:100%;max-width:440px;text-align:center;">
-        <div style="font-size:2rem;margin-bottom:10px;">🏢</div>
+        <div style="margin-bottom:10px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;color:#6366f1;"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
         <h2 style="margin:0 0 6px;font-size:1.1rem;font-weight:800;color:#fff;">SSOでログイン</h2>
         <p style="color:#666;font-size:0.82rem;margin:0 0 20px;line-height:1.6;">会社・学校のメールアドレスを入力してください。<br>対応するIdP（Okta・Azure AD・Google Workspace等）に転送します。</p>
         <input id="sso-email-input" type="email" placeholder="you@company.com" autocomplete="email"
@@ -185,7 +272,7 @@
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:420px;">
         <div style="padding:24px 24px 20px;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center;">
             <div>
-                <div style="font-size:1.4rem;font-weight:900;color:#fff;">✨ アカウント作成</div>
+                <div style="font-size:1.4rem;font-weight:900;color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> アカウント作成</div>
                 <div style="color:#666;font-size:0.8rem;margin-top:2px;">Pro Ultra アカウントを作成する</div>
             </div>
             <button onclick="closeSignUpModal()" style="background:#1e1e1e;border:none;color:#666;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;">✕</button>
@@ -210,7 +297,7 @@
                         style="width:100%;padding:12px 44px 12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;transition:border-color 0.2s;"
                         onfocus="this.style.borderColor='#ff6b35'" onblur="this.style.borderColor='#2a2a2a'"
                         oninput="_checkPwStrength(this.value)">
-                    <button onclick="_togglePw('signup-password',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;">👁</button>
+                    <button onclick="_togglePw('signup-password',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
                 </div>
             </div>
             <div id="signup-pw-strength" style="margin-bottom:16px;min-height:22px;"></div>
@@ -223,7 +310,7 @@
             </div>
             <p id="signup-error" style="color:#ff6b6b;font-size:0.82rem;margin:0 0 14px;min-height:18px;text-align:center;"></p>
             <button id="signup-submit" onclick="submitSignUp()" style="width:100%;padding:14px;border-radius:13px;background:linear-gradient(135deg,#ff6b35,#ff2d55);color:#fff;border:none;font-size:1rem;font-weight:900;cursor:pointer;">
-                🚀 アカウントを作成する
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> アカウントを作成する
             </button>
             <p style="color:#444;font-size:0.75rem;margin:12px 0 0;text-align:center;line-height:1.5;">アカウント作成により、診断履歴のクラウド同期などの機能が利用できます。</p>
         </div>
@@ -234,7 +321,7 @@
 <div id="email-login-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:400px;padding:28px 24px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-            <div style="font-size:1.1rem;font-weight:800;color:#fff;">⭐️ ProUltraアカウントでログイン</div>
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>️ ProUltraアカウントでログイン</div>
             <button onclick="closeEmailLoginModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
         </div>
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:10px;">
@@ -246,7 +333,7 @@
                     style="width:100%;padding:12px 44px 12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;"
                     onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'"
                     onkeydown="if(event.key==='Enter')signInWithEmail()">
-                <button onclick="_togglePw('email-login-password',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;">👁</button>
+                <button onclick="_togglePw('email-login-password',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
             </div>
         </div>
         <p id="email-login-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 12px;min-height:16px;"></p>
@@ -254,9 +341,9 @@
         <!-- Pro Pass（パスキー）ログイン -->
         <button id="passkey-login-btn" onclick="signInWithPasskey()" style="width:100%;padding:11px;border-radius:12px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;font-size:0.88rem;font-weight:700;cursor:pointer;margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:7px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="10" rx="5" ry="5"/><line x1="9" y1="15" x2="9" y2="21"/><line x1="6" y1="18" x2="12" y2="18"/><line x1="17" y1="8" x2="23" y2="8"/><line x1="23" y1="5" x2="23" y2="11"/></svg>
-            🔑 Pro Pass でログイン
+            Pro Pass でログイン
         </button>
-        <button onclick="sendPasswordReset()" style="width:100%;padding:10px;border-radius:12px;background:transparent;color:#6366f1;border:1px solid #6366f1;font-size:0.82rem;cursor:pointer;margin-bottom:8px;">🔑 パスワードを忘れた場合</button>
+        <button onclick="sendPasswordReset()" style="width:100%;padding:10px;border-radius:12px;background:transparent;color:#6366f1;border:1px solid #6366f1;font-size:0.82rem;cursor:pointer;margin-bottom:8px;">パスワードを忘れた場合</button>
         <button onclick="closeEmailLoginModal();openSignUpModal();" style="width:100%;padding:10px;border-radius:12px;background:transparent;color:#666;border:1px solid #2a2a2a;font-size:0.82rem;cursor:pointer;">アカウントをお持ちでない方はこちら →</button>
     </div>
 </div>
@@ -265,29 +352,35 @@
 <div id="delete-account-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:400px;padding:28px 24px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-            <div style="font-size:1.1rem;font-weight:800;color:#ff6b6b;">🗑 アカウントを削除する</div>
+            <div style="font-size:1.1rem;font-weight:800;color:#ff6b6b;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> アカウントを削除する</div>
             <button onclick="closeDeleteAccountModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
         </div>
         <div id="delete-account-step1">
-            <p style="color:#ff6b6b;font-size:0.85rem;font-weight:700;margin:0 0 6px;">⚠️ この操作は取り消せません</p>
+            <p style="color:#ff6b6b;font-size:0.85rem;font-weight:700;margin:0 0 6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> この操作は取り消せません</p>
             <p style="color:#888;font-size:0.82rem;margin:0 0 20px;line-height:1.7;">アカウントと診断履歴がすべて削除されます。<br>削除後は同じメールアドレスで再登録できます。</p>
+            <div id="delete-account-pw-section">
             <p style="color:#ccc;font-size:0.85rem;margin:0 0 8px;">パスワードを入力して確認</p>
             <div style="position:relative;margin-bottom:8px;">
                 <input id="delete-account-pw" type="password" placeholder="パスワード"
                     style="width:100%;padding:12px 44px 12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #333;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;"
                     onfocus="this.style.borderColor='#ff3b30'" onblur="this.style.borderColor='#333'"
                     onkeydown="if(event.key==='Enter')confirmDeleteAccount()">
-                <button onclick="_togglePw('delete-account-pw',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;">👁</button>
+                <button onclick="_togglePw('delete-account-pw',this)" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#555;cursor:pointer;font-size:1rem;padding:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+            </div>
+            <div id="delete-account-oauth-section" style="display:none;margin-bottom:8px;">
+                <p style="color:#ccc;font-size:0.85rem;margin:0 0 12px;">本人確認のため、<span id="delete-account-oauth-name" style="color:#fff;font-weight:700;"></span>で再ログインしてください</p>
+                <button onclick="_deleteAccountViaOAuth()" id="delete-account-oauth-btn" style="width:100%;padding:12px;border-radius:12px;background:#333;color:#fff;border:none;font-size:0.9rem;font-weight:700;cursor:pointer;">再ログインして本人確認</button>
             </div>
             <p id="delete-account-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 16px;min-height:16px;"></p>
-            <button onclick="confirmDeleteAccount()" style="width:100%;padding:13px;border-radius:12px;background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.4);color:#ff6b6b;font-size:0.95rem;font-weight:800;cursor:pointer;">アカウントを削除する</button>
+            <button id="delete-account-confirm-btn" onclick="confirmDeleteAccount()" style="width:100%;padding:13px;border-radius:12px;background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.4);color:#ff6b6b;font-size:0.95rem;font-weight:800;cursor:pointer;">アカウントを削除する</button>
             <button onclick="closeDeleteAccountModal()" style="width:100%;padding:11px;border-radius:12px;background:transparent;color:#555;border:1px solid #2a2a2a;font-size:0.85rem;cursor:pointer;margin-top:8px;">キャンセル</button>
         </div>
         <div id="delete-account-done" style="display:none;text-align:center;">
-            <div style="font-size:2.8rem;margin-bottom:14px;">✅</div>
+            <div style="margin-bottom:14px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
             <p style="color:#fff;font-size:1rem;font-weight:800;margin:0 0 8px;">アカウントを削除しました</p>
             <p style="color:#888;font-size:0.85rem;margin:0 0 20px;line-height:1.7;">同じメールアドレスで再登録してください。<br>新規登録後は自動でProUltra特典が有効になります。</p>
-            <button onclick="location.reload()" style="width:100%;padding:13px;border-radius:12px;background:linear-gradient(135deg,#ff6b35,#ff2d55);color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;">✨ 再登録する</button>
+            <button onclick="location.reload()" style="width:100%;padding:13px;border-radius:12px;background:linear-gradient(135deg,#ff6b35,#ff2d55);color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 再登録する</button>
         </div>
     </div>
 </div>
@@ -296,7 +389,7 @@
 <div id="change-email-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:400px;padding:28px 24px;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-            <div style="font-size:1.1rem;font-weight:800;color:#fff;">📧 メールアドレスの変更</div>
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> メールアドレスの変更</div>
             <button onclick="closeChangeEmailModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
         </div>
         <div id="change-email-step1">
@@ -307,19 +400,127 @@
                 style="width:100%;padding:12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;margin-bottom:8px;"
                 onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
             <p style="color:#888;font-size:0.85rem;margin:8px 0 8px;">パスワード（本人確認）</p>
+            <div id="change-email-pw-section">
             <input id="change-email-pw" type="password" placeholder="現在のパスワード"
                 style="width:100%;padding:12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;margin-bottom:14px;"
                 onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+            </div>
+            <div id="change-email-oauth-section" style="display:none;margin-bottom:14px;">
+                <p style="color:#ccc;font-size:0.85rem;margin:0 0 10px;"><span id="change-email-oauth-name" style="color:#fff;font-weight:700;"></span>で再ログインして本人確認します</p>
+                <button onclick="_sendChangeEmailViaOAuth()" id="change-email-oauth-btn" style="width:100%;padding:12px;border-radius:12px;background:#333;color:#fff;border:none;font-size:0.9rem;font-weight:700;cursor:pointer;">再ログインして送信</button>
+            </div>
             <p id="change-email-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 12px;min-height:16px;"></p>
-            <button onclick="changeEmailSend()" style="width:100%;padding:13px;border-radius:12px;background:#6366f1;color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;">確認メールを送信する</button>
+            <button id="change-email-confirm-btn" onclick="changeEmailSend()" style="width:100%;padding:13px;border-radius:12px;background:#6366f1;color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;">確認メールを送信する</button>
         </div>
         <div id="change-email-step2" style="display:none;text-align:center;">
-            <div style="font-size:2.8rem;margin-bottom:14px;">📬</div>
+            <div style="margin-bottom:14px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/><polyline points="2,20 8,14"/><polyline points="22,20 16,14"/></svg></div>
             <p style="color:#fff;font-size:0.95rem;font-weight:700;margin:0 0 10px;">確認メールを送信しました！</p>
             <p id="change-email-sent-addr" style="color:#6366f1;font-size:0.88rem;font-weight:700;margin:0 0 14px;word-break:break-all;"></p>
             <p style="color:#888;font-size:0.83rem;margin:0 0 24px;line-height:1.7;">メール内のリンクをクリックすると変更されます。<br>変更後は新しいアドレスで再ログインしてください。</p>
             <button onclick="closeChangeEmailModal()" style="width:100%;padding:13px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:0.9rem;font-weight:700;cursor:pointer;">閉じる</button>
         </div>
+    </div>
+</div>
+
+<!-- パスワード変更モーダル -->
+<div id="change-password-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:400px;padding:28px 24px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;">🔒 パスワードの変更</div>
+            <button onclick="closeChangePasswordModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
+        </div>
+        <div id="change-password-step1">
+            <p style="color:#888;font-size:0.85rem;margin:0 0 8px;">現在のパスワード</p>
+            <input id="change-password-current" type="password" placeholder="現在のパスワード"
+                style="width:100%;padding:12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;margin-bottom:14px;"
+                onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+            <p style="color:#888;font-size:0.85rem;margin:0 0 8px;">新しいパスワード（6文字以上）</p>
+            <input id="change-password-new" type="password" placeholder="新しいパスワード"
+                style="width:100%;padding:12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;margin-bottom:8px;"
+                onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+            <input id="change-password-confirm" type="password" placeholder="新しいパスワード（確認）"
+                style="width:100%;padding:12px 14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:0.93rem;outline:none;box-sizing:border-box;margin-bottom:14px;"
+                onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+            <p id="change-password-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 12px;min-height:16px;"></p>
+            <button onclick="changePasswordSubmit()" style="width:100%;padding:13px;border-radius:12px;background:#6366f1;color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;">パスワードを変更する</button>
+        </div>
+        <div id="change-password-step2" style="display:none;text-align:center;">
+            <div style="margin-bottom:14px;font-size:2.4rem;">✅</div>
+            <p style="color:#fff;font-size:0.95rem;font-weight:700;margin:0 0 18px;">パスワードを変更しました！</p>
+            <button onclick="closeChangePasswordModal()" style="width:100%;padding:13px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:0.9rem;font-weight:700;cursor:pointer;">閉じる</button>
+        </div>
+    </div>
+</div>
+
+<div id="login-history-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:420px;padding:28px 24px;max-height:80vh;display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;">📜 ログイン履歴</div>
+            <button onclick="closeLoginHistoryModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#666;font-size:0.78rem;margin:0 0 10px;">直近20件のログインを表示しています</p>
+        <div id="login-history-list" style="overflow-y:auto;flex:1;"></div>
+    </div>
+</div>
+
+<div id="device-sessions-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:420px;padding:28px 24px;max-height:80vh;display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <div style="font-size:1.1rem;font-weight:800;color:#fff;">💻 ログイン中の端末</div>
+            <button onclick="closeDeviceSessionsModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#666;font-size:0.78rem;margin:0 0 10px;">他の端末を選んで強制ログアウトできます</p>
+        <div id="device-sessions-list" style="overflow-y:auto;flex:1;"></div>
+    </div>
+</div>
+
+<div id="twofa-verify-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.97);z-index:10000000;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:380px;padding:28px 24px;text-align:center;">
+        <div id="twofa-verify-icon" style="font-size:2.2rem;margin-bottom:10px;">📧</div>
+        <div id="twofa-verify-title" style="font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:8px;">2段階認証</div>
+        <p id="twofa-verify-desc" style="color:#888;font-size:0.83rem;margin:0 0 18px;line-height:1.6;">登録メールアドレスに送信された6桁のコードを入力してください</p>
+        <input id="twofa-verify-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000"
+            style="width:100%;padding:14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:1.3rem;letter-spacing:6px;text-align:center;outline:none;box-sizing:border-box;margin-bottom:12px;"
+            onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+        <p id="twofa-verify-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 14px;min-height:16px;"></p>
+        <button onclick="twofaVerifySubmit()" style="width:100%;padding:13px;border-radius:12px;background:#6366f1;color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;margin-bottom:10px;">確認する</button>
+        <div style="display:flex;gap:10px;">
+            <button id="twofa-resend-btn" onclick="twofaResendCode()" style="flex:1;padding:11px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:0.82rem;font-weight:700;cursor:pointer;">コード再送信</button>
+            <button onclick="twofaVerifyCancel()" style="flex:1;padding:11px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:0.82rem;font-weight:700;cursor:pointer;">キャンセル</button>
+        </div>
+        <button id="twofa-sms-recover-link" onclick="twofaRecoverViaSms()" style="display:none;width:100%;margin-top:14px;padding:0;border:none;background:none;color:#6366f1;font-size:0.8rem;font-weight:700;cursor:pointer;text-decoration:underline;">📱 認証アプリを紛失した場合はSMSで復旧する</button>
+    </div>
+</div>
+
+<div id="totp-setup-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.97);z-index:10000000;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:400px;padding:28px 24px;text-align:center;margin:auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <div style="font-size:1.05rem;font-weight:800;color:#fff;">🔐 認証アプリを設定</div>
+            <button onclick="closeTotpSetupModal()" style="background:#1e1e1e;border:none;color:#666;width:30px;height:30px;border-radius:50%;font-size:0.95rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#888;font-size:0.8rem;margin:6px 0 16px;line-height:1.6;">Google Authenticator等のアプリでQRコードを読み取るか、下の鍵を手動で入力してください</p>
+        <div id="totp-setup-qr" style="display:flex;justify-content:center;align-items:center;background:#fff;border-radius:14px;padding:14px;margin-bottom:14px;min-height:180px;"></div>
+        <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:10px 12px;margin-bottom:8px;">
+            <div style="color:#666;font-size:0.7rem;margin-bottom:4px;">アカウント名（手動入力の場合、アプリの「アカウント名」欄にこれを入力）</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+                <div id="totp-setup-account" style="flex:1;color:#fff;font-family:monospace;font-size:0.8rem;word-break:break-all;text-align:left;"></div>
+                <button onclick="copyTotpAccountToClipboard(this)" style="flex-shrink:0;padding:6px 12px;border-radius:8px;background:#333;color:#ddd;border:none;font-size:0.75rem;font-weight:700;cursor:pointer;">コピー</button>
+            </div>
+        </div>
+        <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:10px 12px;margin-bottom:16px;">
+            <div style="color:#666;font-size:0.7rem;margin-bottom:4px;">キー（アプリの「キー」欄にこれを入力）</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+                <div id="totp-setup-secret" style="flex:1;color:#fff;font-family:monospace;font-size:0.82rem;word-break:break-all;text-align:left;"></div>
+                <button onclick="copyTotpSecretToClipboard(this)" style="flex-shrink:0;padding:6px 12px;border-radius:8px;background:#333;color:#ddd;border:none;font-size:0.75rem;font-weight:700;cursor:pointer;">コピー</button>
+            </div>
+        </div>
+        <p style="color:#888;font-size:0.8rem;margin:0 0 10px;text-align:left;">アプリに表示された6桁のコードを入力して確認してください</p>
+        <input id="totp-setup-input" type="text" inputmode="numeric" maxlength="6" placeholder="000000"
+            style="width:100%;padding:14px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;font-size:1.3rem;letter-spacing:6px;text-align:center;outline:none;box-sizing:border-box;margin-bottom:12px;"
+            onfocus="this.style.borderColor='#6366f1'" onblur="this.style.borderColor='#2a2a2a'">
+        <p id="totp-setup-error" style="color:#ff6b6b;font-size:0.8rem;margin:0 0 14px;min-height:16px;"></p>
+        <button onclick="totpSetupConfirm()" style="width:100%;padding:13px;border-radius:12px;background:#6366f1;color:#fff;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;margin-bottom:10px;">確認して有効化</button>
+        <button onclick="closeTotpSetupModal()" style="width:100%;padding:11px;border-radius:12px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:0.82rem;font-weight:700;cursor:pointer;">キャンセル</button>
     </div>
 </div>
 
@@ -334,6 +535,13 @@
             </div>
         </div>
     </header>
+    <div id="ai-pro-advice-box" style="display:none;margin:14px 0;background:linear-gradient(135deg,#1e1033,#150a24);border:1px solid #7c3aed55;border-radius:16px;padding:16px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="font-size:1rem;">🤖</span>
+            <span style="color:#c4b5fd;font-size:0.85rem;font-weight:800;">AIコメント強化版 — 詳細アドバイス</span>
+        </div>
+        <div id="ai-pro-advice-body" style="color:#ddd;font-size:0.85rem;line-height:1.8;white-space:pre-wrap;">生成しています...</div>
+    </div>
     <section class="browser-info-area">
         <div class="info-panel"><label>実測平均フレームレート<br><span class="desc">（1秒間に何回画面が更新されるか。高いほど滑らか）</span></label><span id="b-fps-avg" class="val">-- FPS</span></div>
         <div class="info-panel"><label>1% LOW フレームレート<br><span class="desc">(最も重い場面でのFPS。低いとカクつきを感じやすい)</label><span id="b-fps-low" class="val">-- FPS</span></div>
@@ -383,22 +591,22 @@
         <div class="spec-row" id="row-32"><span class="label">ダークモード / ハイコントラスト</span><span id="v-32" class="val">--</span></div>
         <div class="spec-row" id="row-33"><span class="label">使用ブラウザ</span><span id="v-33" class="val">--</span></div>
         <div class="spec-row" id="row-34"><span class="label">デバイス機種</span><span id="v-34" class="val">--</span></div>
-        <div class="spec-row" id="row-35" style="display:none;"><span class="label">💾 ストレージ使用量</span><span id="v-35" class="val">--</span></div>
-        <div class="spec-row" id="row-36" style="display:none;"><span class="label">⚙️ WebAssembly 対応</span><span id="v-36" class="val">--</span></div>
-        <div class="spec-row" id="row-37" style="display:none;"><span class="label">🔔 通知許可状態</span><span id="v-37" class="val">--</span></div>
+        <div class="spec-row" id="row-35" style="display:none;"><span class="label">ストレージ使用量</span><span id="v-35" class="val">--</span></div>
+        <div class="spec-row" id="row-36" style="display:none;"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> WebAssembly 対応</span><span id="v-36" class="val">--</span></div>
+        <div class="spec-row" id="row-37" style="display:none;"><span class="label">通知許可状態</span><span id="v-37" class="val">--</span></div>
         <!-- 詳細モード（ProUltra限定） -->
-        <div class="spec-row" id="row-35" style="display:none;"><span class="label">💾 ストレージ使用量</span><span id="v-35" class="val">--</span></div>
-        <div class="spec-row" id="row-36" style="display:none;"><span class="label">⚙️ WebAssembly 対応</span><span id="v-36" class="val">--</span></div>
-        <div class="spec-row" id="row-37" style="display:none;"><span class="label">🔔 通知許可状態</span><span id="v-37" class="val">--</span></div>
+        <div class="spec-row" id="row-35" style="display:none;"><span class="label">ストレージ使用量</span><span id="v-35" class="val">--</span></div>
+        <div class="spec-row" id="row-36" style="display:none;"><span class="label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> WebAssembly 対応</span><span id="v-36" class="val">--</span></div>
+        <div class="spec-row" id="row-37" style="display:none;"><span class="label">通知許可状態</span><span id="v-37" class="val">--</span></div>
     </main>
 </div>
 <div id="device-warn-overlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
     <div id="ip-warn-box">
-        <h3>📱 デバイス機種名をそのまま含めますか？</h3>
+        <h3>デバイス機種名をそのまま含めますか？</h3>
         <p id="device-warn-msg"></p>
         <div class="ip-warn-btns">
             <button style="background:#34c759;color:#fff;width:100%;padding:14px;border-radius:14px;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;margin-bottom:8px;" onclick="deviceChosen('show')">そのまま含めて保存</button>
-            <button style="background:var(--accent);color:#fff;width:100%;padding:14px;border-radius:14px;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;" onclick="deviceChosen('hide')">🔒 デバイス名を * に変更して保存</button>
+            <button style="background:var(--accent);color:#fff;width:100%;padding:14px;border-radius:14px;border:none;font-size:0.95rem;font-weight:800;cursor:pointer;" onclick="deviceChosen('hide')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> デバイス名を * に変更して保存</button>
         </div>
         <p class="ip-note">※ デバイス名はUA文字列から取得しており、サーバーには送信されません。</p>
         <button onclick="goBackToIP()" style="background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.3);color:#ff6b6b;font-size:0.85rem;font-weight:700;cursor:pointer;margin-top:12px;width:100%;text-align:center;padding:10px;border-radius:10px;">← 戻る（IPアドレスの選択に戻る）</button>
@@ -409,7 +617,7 @@
     <div style="background:#111;border:1px solid #ff9500;border-radius:24px;width:100%;max-width:420px;max-height:90vh;overflow-y:auto;">
         <!-- ヘッダー -->
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">👥 親友グループ</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 親友グループ</h2>
             <button onclick="document.getElementById('friend-modal').style.display='none';document.body.style.overflow='';" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div id="friend-modal-content" style="padding:20px 24px 28px;"></div>
@@ -420,14 +628,14 @@
 <div id="group-create-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #ff9500;border-radius:24px;width:100%;max-width:420px;max-height:90vh;overflow-y:auto;">
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">✨ グループを作成</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> グループを作成</h2>
             <button onclick="closeGroupCreate()" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="padding:20px 24px 28px;">
             <!-- アイコン選択 -->
             <div style="margin-bottom:16px;">
                 <label style="display:block;color:#ccc;font-size:0.82rem;font-weight:700;margin-bottom:8px;">グループアイコン</label>
-                <div id="group-icon-selected" style="font-size:2.5rem;text-align:center;margin-bottom:8px;cursor:pointer;padding:8px;background:#1a1a1a;border-radius:12px;border:1px solid #333;" onclick="toggleIconPicker()">🏆</div>
+                <div id="group-icon-selected" style="font-size:2.5rem;text-align:center;margin-bottom:8px;cursor:pointer;padding:8px;background:#1a1a1a;border-radius:12px;border:1px solid #333;" onclick="toggleIconPicker()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
                 <div id="group-icon-picker" style="display:none;background:#1a1a1a;border-radius:12px;padding:10px;border:1px solid #333;max-height:140px;overflow-y:auto;">
                     <div style="display:flex;flex-wrap:wrap;gap:6px;">
                         <span onclick="selectGroupIcon('🏆')" style="font-size:1.5rem;cursor:pointer;padding:4px;border-radius:6px;">🏆</span>
@@ -488,7 +696,7 @@
                 </div>
             </div>
             <div id="group-create-error" style="color:#ff6b6b;font-size:0.82rem;margin-bottom:10px;display:none;"></div>
-            <button onclick="submitCreateGroup()" style="width:100%;padding:14px;border-radius:14px;background:linear-gradient(135deg,#ff9500,#ff6b00);color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">✨ グループを作成する</button>
+            <button onclick="submitCreateGroup()" style="width:100%;padding:14px;border-radius:14px;background:linear-gradient(135deg,#ff9500,#ff6b00);color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> グループを作成する</button>
         </div>
     </div>
 </div>
@@ -504,14 +712,29 @@
     </div>
 </div>
 
+<!-- グループチャットモーダル -->
+<div id="group-chat-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999999;flex-direction:column;align-items:center;padding:0;box-sizing:border-box;">
+    <div style="background:#0d0d0d;border:1px solid #34c759;border-radius:0;width:100%;max-width:480px;height:100%;display:flex;flex-direction:column;margin:0 auto;">
+        <div style="background:#111;padding:14px 18px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;">
+            <h2 id="group-chat-title" style="margin:0;font-size:1rem;font-weight:900;color:#fff;">💬 グループチャット</h2>
+            <button onclick="closeGroupChat()" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+        <div id="group-chat-messages" style="flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px;"></div>
+        <div style="padding:12px 14px;border-top:1px solid #2a2a2a;display:flex;gap:8px;flex-shrink:0;">
+            <input id="group-chat-input" type="text" placeholder="メッセージを入力..." maxlength="300" style="flex:1;background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px 14px;color:#fff;font-size:0.9rem;outline:none;" onkeypress="if(event.key==='Enter')sendGroupChatMessage()">
+            <button onclick="sendGroupChatMessage()" style="background:#34c759;border:none;color:#000;font-weight:700;padding:10px 16px;border-radius:14px;cursor:pointer;font-size:0.85rem;">送信</button>
+        </div>
+    </div>
+</div>
+
 <!-- AIチャットモーダル -->
 <div id="ai-modal">
     <div id="ai-modal-box">
         <div id="ai-header">
-            <h2>🤖 AIアドバイザー</h2>
+            <h2 style="display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="15" x2="8" y2="17"/><line x1="16" y1="15" x2="16" y2="17"/></svg> AIアドバイザー</h2>
             <div style="display:flex;gap:8px;align-items:center;">
-                <button onclick="showAIConvManager()" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#a78bfa;border-radius:10px;padding:6px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;">📂 保存した会話</button>
-                <button onclick="(()=>{const n=document.getElementById('ai-save-name').value.trim();saveCurrentConv(n);document.getElementById('ai-save-name').value='';alert('保存しました！');})()" style="background:rgba(0,122,255,0.2);border:1px solid rgba(0,122,255,0.4);color:#6bb5ff;border-radius:10px;padding:6px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;">💾 保存</button>
+                <button onclick="showAIConvManager()" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#a78bfa;border-radius:10px;padding:6px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> 保存した会話</button>
+                <button onclick="(()=>{const n=document.getElementById('ai-save-name').value.trim();saveCurrentConv(n);document.getElementById('ai-save-name').value='';alert('保存しました！');})()" style="background:rgba(0,122,255,0.2);border:1px solid rgba(0,122,255,0.4);color:#6bb5ff;border-radius:10px;padding:6px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>保存</button>
                 <button id="ai-close" onclick="closeAIChat()">✕</button>
             </div>
         </div>
@@ -521,7 +744,19 @@
         </div>
         <div id="ai-messages"></div>
         <div id="ai-input-area">
-            <textarea id="ai-input" rows="2" placeholder="診断結果について質問してみてください..."></textarea>
+            <div style="display:flex;flex-direction:column;flex:1;gap:6px;">
+                <div id="ai-image-preview" style="display:none;position:relative;width:fit-content;">
+                    <img id="ai-image-thumb" style="max-height:80px;max-width:180px;border-radius:8px;border:1px solid rgba(99,102,241,0.3);" />
+                    <button onclick="clearAIImage()" style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:#ff3b30;border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">✕</button>
+                </div>
+                <div style="display:flex;gap:8px;align-items:flex-end;">
+                    <textarea id="ai-input" rows="2" placeholder="診断結果について質問してみてください..."></textarea>
+                    <input type="file" id="ai-image-input" accept="image/*" style="display:none;" onchange="handleAIImage(this)">
+                    <button onclick="document.getElementById('ai-image-input').click()" style="width:40px;height:40px;border-radius:12px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.25);color:#a78bfa;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </button>
+                </div>
+            </div>
             <button id="ai-send" onclick="sendAIMessage()">送信</button>
         </div>
     </div>
@@ -531,23 +766,23 @@
 <div id="ai-conv-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:var(--card);border:1px solid #6366f1;border-radius:24px;width:100%;max-width:560px;padding:24px;max-height:85vh;overflow-y:auto;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#6366f1,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">📂 保存した会話（最大5件）</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#6366f1,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> 保存した会話（最大5件）</h2>
             <button onclick="document.getElementById('ai-conv-modal').style.display='none'" style="background:none;border:none;color:var(--sub-text);font-size:1.4rem;cursor:pointer;">✕</button>
         </div>
         <div id="ai-conv-list"></div>
     </div>
 </div>
 
-<button id="legend-btn" onclick="document.getElementById('legend-overlay').style.display='flex'">🎨 色の基準を確認する</button>
+<button id="legend-btn" onclick="document.getElementById('legend-overlay').style.display='flex'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> 色の基準を確認する</button>
 
 <!-- IP警告モーダル -->
 <div id="ip-warn-overlay">
     <div id="ip-warn-box">
-        <h3>⚠️ IPアドレスをスクリーンショットに含めますか？</h3>
+        <h3><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> IPアドレスをスクリーンショットに含めますか？</h3>
         <p>IPアドレスをSNSなどで公開すると、おおよその居住地域や利用プロバイダが特定される危険があります。<br>公開する予定がある場合は「IPアドレスを非表示にして保存」をおすすめします。</p>
         <div class="ip-warn-btns">
-            <button id="ip-hide-btn"  onclick="ipChosen('hide')">🔒 IPアドレスを非表示にして保存（推奨）</button>
-            <button id="ip-mask-btn"  onclick="ipChosen('mask')">⚠️ 一部を * で隠して保存</button>
+            <button id="ip-hide-btn"  onclick="ipChosen('hide')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> IPアドレスを非表示にして保存（推奨）</button>
+            <button id="ip-mask-btn"  onclick="ipChosen('mask')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 一部を * で隠して保存</button>
             <button id="ip-include-btn" onclick="ipChosen('show')">そのまま含めて保存</button>
         </div>
         <p class="ip-note">※ IPアドレスの取得は外部API（ipify.org）への問い合わせのみで行われます。<br>取得した値はブラウザ内でのみ使用され、当診断ツールのサーバーには一切送信されません。</p>
@@ -558,7 +793,7 @@
 <!-- 色の基準モーダル -->
 <div id="legend-overlay">
     <div id="legend-box">
-        <h2>🎨 インジケーターの色の基準</h2>
+        <h2><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> インジケーターの色の基準</h2>
         <div class="legend-row">
             <div class="legend-dot ok"></div>
             <div class="legend-label" id="legend-ok-label">青 ／ 正常</div>
@@ -589,154 +824,105 @@
         <!-- 右上のクローズボタン -->
         <button onclick="execUpdateClose()" style="position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: #999; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='#fff';" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.color='#999';">✕</button>
         
-        <!-- バージョンタイトル -->
-        <h2 style="margin: 0 0 20px; font-size: 1.4rem; font-weight: 900; color: var(--text); border-bottom: 2px solid var(--border); padding-bottom: 15px;">
-            🚀 Release 1.2.3.7
-        </h2>
-        
-        <!-- 【自由記述エリア】ここを書き換えるだけでOK -->
-        <div id="update-text-area" style="font-size: 1rem; color: var(--text); line-height: 1.8; max-height: 450px; overflow-y: auto; margin-bottom: 25px; padding-right: 10px;">
+        <!-- アップデート情報モーダル内：バージョンタイトル -->
+<h2 style="margin: 0 0 20px; font-size: 1.4rem; font-weight: 900; color: var(--text); border-bottom: 2px solid var(--border); padding-bottom: 15px;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> Release 1.2.4.15
+</h2>
 
-            <strong>【Release 1.2.3.7 4ヶ月記念イベント・診断モード・AIアドバイザー強化アップデート】</strong><br><br>
+<!-- 【自由記述エリア】 -->
+<div id="update-text-area" style="font-size: 1rem; color: var(--text); line-height: 1.8; max-height: 450px; overflow-y: auto; margin-bottom: 25px; padding-right: 10px;">
 
-            🔒 <strong>自動ログアウト仕様を変更</strong><br>
-            ・以前：最初のログインから7日で自動ログアウト<br>
-            ・変更後：<strong>最後にアプリを開いた時刻から48時間（2日間）操作がない場合</strong>に自動ログアウト<br>
-            ・毎日使っていれば自動ログアウトされません<br><br>
+    <strong>【Release 1.2.4.15 アップデート】</strong><br><br>
 
-            🎊 <strong>4ヶ月記念イベントを開催予定（6/27〜7/17）</strong><br>
-            ・イベント期間中は全ユーザーに🎊記念バッジ・🌌Cosmosスキンを無料配布<br>
-            ・7日間ログインボーナス：毎日アクセスでポイント＆ガチャ券を獲得（Day3・Day7にガチャ券追加）<br>
-            ・21日間スタンプラリー：3日・7日・14日・21日で豪華報酬（ガチャ券・スキン・バッジ・200pt）<br>
-            ・週替わりチャレンジ（ProUltra+限定）：Week1〜3で限定バッジを獲得<br><br>
+    🔒 <strong>プライベート診断機能を追加</strong><br>
+    ・診断結果を通常の履歴とは分けて、通知なし・パスワード保護で保存できる「プライベート診断」を追加しました<br>
+    ・専用の「プライベート履歴」から、パスワードを入力した場合のみ過去の結果（最大10件）を確認できます<br><br>
 
-            ⚡ <strong>診断モード選択機能を追加（ProUltra+ / 4ヶ月記念限定）</strong><br>
-            ・再診断ボタンから3つのモードを選べるようになりました<br>
-            ・⚡ 高速診断モード：最速約8秒で完了。急いでいる人向け<br>
-            ・🔬 通常診断：約25秒。これまでと同じバランス型<br>
-            ・👑 ProUltra Max：約45秒。CPU5回計測・FPS30秒・追加5項目（GPU詳細・メモリ帯域・ストレージ速度・JSエンジン・通信精密）の超精密診断<br><br>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> <strong>親友コードグループ機能を強化</strong><br>
+    ・「招待リンクを発行する」を追加：グループへの招待リンクを簡単に共有できます<br>
+    ・「メンバーのスコアを比較」を追加：グループ内メンバーの診断スコアを比較できます<br>
+    ・「グループチャットを開く」を追加：グループ専用のチャット機能を利用できます<br><br>
 
-            🤖 <strong>AIアドバイザーの知識を大幅強化</strong><br>
-            ・4ヶ月記念イベントの詳細・診断モード・ガチャシステム等の最新情報を反映<br>
-            ・より正確で詳しいアドバイスが可能になりました<br><br>
+    🐛 <strong>表示不具合を修正</strong><br>
+    ・一部の通知・アイコン表示で、SVGアイコンがそのままテキストとして表示されてしまう不具合を修正しました<br><br>
 
-            🐛 <strong>診断エンジンバージョン表示を修正</strong><br>
-            ・「診断エンジンバージョン」の表示が古いバージョンになっていた不具合を修正<br><br>
+    <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
+    ─── 以下は前バージョンの内容 ───
+    </div><br>
 
-            🎟️ <strong>ガチャ救済措置を追加</strong><br>
-            ・未入手バッジが残り1種の状態でガチャ券を使って3回引くと必ず入手できる救済措置を追加<br><br>
+    <strong>【Release 1.2.4 中型アップデート】</strong><br><br>
 
-            🔑 <strong>親友コード特典を追加</strong><br>
-            ・特定グループに参加するとガチャ券×3セットが1回限り無料でもらえる特典を追加<br><br>
+    <strong>AIへの新機能</strong><br>
+    ・利用規約やプライバシーポリシーについて、AIに直接質問できるようになりました。<br><br>
 
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
+    🐛 <strong>バグ修正</strong><br>
+    ・モーダルが表示されている間、背景の画面もスクロールしてしまい、モーダルがスクロールできなくなる可能性がある不具合を修正しました。<br><br>
 
-            <strong>【Release 1.2.3.03 デイリーミッション・ショップ拡充・iOS改善アップデート】</strong><br><br>
+    🔀 <strong>画面遷移の変更</strong><br>
+    ・利用規約モーダルを削除し、直接規約専用ページ（/terms-of-service など）へ遷移する形に改善しました。<br><br>
 
-            🏷️ <strong>バッジ装備機能を追加（👑 ProUltra限定）</strong><br>
-            ・ガチャやショップで入手したバッジをプロフィールに装備できるようになりました<br><br>
+    🧭 <strong>UI変更（下部バー）</strong><br>
+    ・フッターの規約リンク等の並びを、画面サイズに合わせて最適に自動改行（段数調整）されるよう変更しました。<br><br>
 
-            🎯 <strong>デイリーミッションシステムを追加（👑 ProUltra限定）</strong><br>
-            ・毎日4つのミッションがランダムで出題され、達成するとポイント獲得<br><br>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>️ <strong>コンテンツ削除</strong><br>
+    ・3ヶ月イベントの「🎂 記念」を完全に削除しました。<br><br>
 
-            🪙 <strong>ポイントショップに多数のアイテムを追加</strong><br>
-            ・スキン・ガチャ券・AIチャット無制限・バッジなど多数追加<br><br>
+    🧹 <strong>履歴整理</strong><br>
+    ・バージョン1.2.3.7より前の古いアップデート履歴を削除しました。<br><br>
 
-            🎂 <strong>リリース3ヶ月記念イベントを開催（〜6/14 終了）</strong><br>
-            ・全ユーザーに期間限定スキン「🎉 Celebration」を無料解放（現在は終了）<br>
-            ・ProUltra会員の診断ポイント獲得3倍（現在は終了）<br>
-            ・ガチャ券購入は6/15〜6/26の間停止中。6/27の4ヶ月記念イベント開始と同時に再開予定<br><br>
+    📘 <strong>ドキュメント更新</strong><br>
+    ・「使い方」欄を最新の内容に更新しました。
 
-            🎰 <strong>スキンガチャシステムを追加（👑 ProUltra限定）</strong><br>
-            ・ファイア・オーシャン・フォレストなど21種のガチャ限定スキンを追加<br>
-            ・1日3回まで無料で引ける（ポイント消費なし）<br><br>
+    <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
+    ─── 以下は前バージョンの内容 ───
+    </div><br>
 
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
+    <strong>【Release 1.2.3.7_v2 緊急アップデート】</strong><br><br>
 
-            <strong>【Release 1.1.5 ProUltra限定ツール追加アップデート】</strong><br><br>
+    🔒 <strong>ログイン仕様を変更</strong><br>
+    ・ログインができない問題を修正
+    <br><br><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> <strong>オフライン仕様を変更</strong><br>
+    ・1度オンラインで診断をすると、次回以降オフラインでも診断できるようになりました。<br>ただし、AI診断などはできません。
 
-            🔋 <strong>バッテリー寿命予測を追加（👑 ProUltra限定）</strong><br>
-            ・Battery API＋手入力情報をAIが解析し、バッテリー劣化状況を推定<br><br>
+    <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
+    ─── さらに前のバージョン───
+    </div><br>
+<strong>【Release 1.2.3.7 半年記念イベント・診断モード・AIアドバイザー強化アップデート】</strong><br><br>
 
-            📱 <strong>買い替えシミュレーターを追加（👑 ProUltra限定）</strong><br>
-            ・iPhone 17〜13 / Galaxy S25〜S23など37機種収録<br><br>
-            ・ProUltraアカウントでログイン後、上部バーの「🔑 Pro Pass登録」から登録できます<br>
-            ・Touch ID / Face ID / Windows Hello / Android生体認証に対応<br><br>
+    🔒 <strong>自動ログアウト仕様を変更</strong><br>
+    ・以前：最初のログインから7日で自動ログアウト<br>
+    ・変更後：<strong>最後にアプリを開いた時刻から48時間（2日間）操作がない場合</strong>に自動ログアウト<br>
+    ・毎日使っていれば自動ログアウトされません<br><br>
 
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
+    🎊 <strong>半年記念イベントを開催予定（8/15〜9/4）</strong><br>
+    ・イベント期間中は全ユーザーに🎊記念バッジ・🌌Cosmosスキンを無料配布<br>
+    ・7日間ログインボーナス：毎日アクセスでポイント＆ガチャ券を獲得（Day3・Day7にガチャ券追加）<br>
+    ・21日間スタンプラリー：3日・7日・14日・21日で豪華報酬（ガチャ券・スキン・バッジ・200pt）<br>
+    ・週替わりチャレンジ（ProUltra+限定）：Week1〜3で限定バッジを獲得<br><br>
 
-            <strong>【Release 1.0.5.2 機能追加アップデート】</strong><br><br>
+    ⚡ <strong>診断モード選択機能を追加（ProUltra+ / 半年記念限定）</strong><br>
+    ・再診断ボタンから3つのモードを選べるようになりました<br>
+    ・⚡ 高速診断モード：最速約8秒で完了。急いでいる人向け<br>
+    ・🔬 通常診断：約25秒。これまでと同じバランス型<br>
+    ・👑 ProUltra Max：約45秒。CPU5回計測・FPS30秒・追加5項目（GPU詳細・メモリ帯域・ストレージ速度・JSエンジン・通信精密）の超精密診断<br><br>
 
-            🔔 <strong>バックグラウンドプッシュ通知に対応</strong><br>
-            ・アプリを閉じていても通知が届くようになりました<br>
-            ・設定画面の通知セクションから「📲 登録する」をタップして有効化できます<br>
-            ・iPhone（PWA）・Android・Windowsに対応<br><br>
+    <strong>AIアドバイザーの知識を大幅強化</strong><br>
+    ・半年記念イベントの詳細・診断モード・ガチャシステム等の最新情報を反映<br>
+    ・より正確で詳しいアドバイスが可能になりました<br><br>
 
-            📱 <strong>デバイス機種の手動設定機能を追加</strong><br>
-            ・設定画面のデータ・操作セクションから機種を手動で選択できます<br>
-            ・iPhone 12〜16全モデル・主要Android機種（Galaxy・Pixel・Xperia・AQUOS等）・PC各種に対応<br>
-            ・未選択の場合は従来通り自動検出されます<br><br>
+    🐛 <strong>診断エンジンバージョン表示を修正</strong><br>
+    ・「診断エンジンバージョン」の表示が古いバージョンになっていた不具合を修正<br><br>
 
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>️ <strong>ガチャ救済措置を追加</strong><br>
+    ・未入手バッジが残り1種の状態でガチャ券を使って3回引くと必ず入手できる救済措置を追加<br><br>
 
-            <strong>【Release 1.0.2 機能刷新アップデート】</strong><br><br>
+    <strong>親友コード特典を追加</strong><br>
+    ・特定グループに参加するとガチャ券×3セットが1回限り無料でもらえる特典を追加<br><br>
+    
 
-            🔋 <strong>「ページ読み込み速度テスト」を廃止・「バッテリードレインテスト」を新設</strong><br>
-            ・ブラウザ制限により精度が低かった速度テストを廃止<br>
-            ・CPU持続負荷テスト（約10秒）でデバイスのサーマル特性を計測<br>
-            ・デバイス種別（Chromebook / iPhone・iPad / Android高・低 / ノートPC / デスクトップPC）を自動判定<br>
-            ・同クラスの実機統計データ（GSMArena・Notebookcheck）と組み合わせて通常使用時・高負荷時のバッテリー持ちを推定<br>
-            ・パフォーマンス安定率（%）を表示。負荷中の動作一貫性を変動係数（CV）で算出<br>
-            ・Battery APIを使用しないためiOS・Firefox・充電中でも計測可能<br>
-            ・デスクトップPCはバッテリー非搭載として「非搭載」と表示<br><br>
+    <!-- 次のアプデ文はこの下に追加していくだけでOK -->
 
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
-
-            <strong>【Release 1.0.1 不具合修正・UI改善アップデート】</strong><br><br>
-
-            🐛 <strong>不具合修正</strong><br>
-            ・アップデート情報の表示が「Beta 1.0.0」になっていた問題を修正<br>
-            ・新ドメインで旧ドメイン向けの案内バナーが表示されていた問題を修正<br>
-            ・使い方FAQに「使い方を開くと勝手に診断される」という誤った記載があった問題を修正<br>
-            ・設定項目を変えるたびにフォントアクセス許可ダイアログが出る問題を修正<br><br>
-
-            📤 <strong>SNSシェア機能を強化</strong><br>
-            ・X（旧Twitter）のシェアボタンを押すと画像をダウンロード後、テキスト入力済みの投稿画面へ遷移するよう変更<br>
-            ・LINE・Bluesky・Threads・Facebookへのシェアボタンを追加<br><br>
-
-            <div style="font-size:0.8rem;color:#666;border-top:1px solid var(--border);padding-top:12px;margin-top:4px;">
-            ─── 以下は前バージョンの内容 ───
-            </div><br>
-
-            <strong>【Release 1.0.0 ドメイン移行・機能強化アップデート】</strong><br><br>
-
-            🌐 <strong>ドメイン移行完了</strong><br>
-            新ドメイン: <a href="https://pro-ultra.pages.dev/" target="_blank" rel="noopener" style="color:#ffa5a5;text-decoration:underline;font-weight:700;">https://pro-ultra.pages.dev/</a><br><br>
-
-            💾 <strong>データ管理機能を追加</strong><br>
-            ・診断履歴・AI会話をバックアップ・復元できるようになりました<br>
-            ・「💾 データ管理」メニューからアクセス<br><br>
-
-            📖 <strong>使い方ガイド追加</strong><br>
-            ・「❓ 使い方」メニューで確認できます<br><br>
-
-            🐛 <strong>バグ修正 / その他改善</strong><br>
-            ・ProUltraアカウントのログイン反映問題を修正<br>
-            ・SEO対策（メタタグ、robots.txt、sitemap.xml追加）<br>
-
-            <!-- 次のアプデ文はこの下に追加していくだけでOK -->
-
-        </div>
+</div>
         <!-- 記述エリアここまで -->
 
         <!-- 確認ボタン（薄い緑） -->
@@ -748,7 +934,7 @@
 
 <script>
     // バージョン識別キー（アプデのたびに末尾の数字などを変えてください）
-    const CURRENT_UPDATE_ID = "Release 1.2.3.03";
+    const CURRENT_UPDATE_ID = "Release 1.2.4.15";
 
     // 読み込み時に表示を判定
     window.addEventListener('DOMContentLoaded', () => {
@@ -780,40 +966,61 @@
 
 
 <div class="action-zone">
-    <div id="auth-status-badge" style="display:none;background:#1a1a2e;border:1px solid #6366f1;border-radius:14px;padding:10px 16px;text-align:center;font-size:0.82rem;color:#a78bfa;margin-bottom:12px;"></div>
+    <div id="auth-status-badge" style="display:none;background:rgba(99,102,241,0.12);border:1px solid #6366f1;border-radius:14px;padding:10px 16px;text-align:center;font-size:0.82rem;color:#a78bfa;margin-bottom:12px;"></div>
     <div class="action-zone-card">
         <!-- 画像保存（全幅） -->
-        <button id="save-btn" onclick="triggerReportCapture()">📸 診断レポートを画像で保存する</button>
-        <p id="share-hint" style="display:none;color:var(--sub-text);font-size:0.8rem;text-align:center;margin:0;">💡 プレビュー画面のダウンロードボタン下からXにシェアできます</p>
+        <button id="save-btn" onclick="triggerReportCapture()" style="display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> 診断レポートを画像で保存する</button>
+        <p id="share-hint" style="display:none;color:var(--sub-text);font-size:0.8rem;text-align:center;margin:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/><line x1="10" y1="21" x2="14" y2="21"/></svg> プレビュー画面のダウンロードボタン下からXにシェアできます</p>
 
-        <!-- 2列グリッド：主要機能 -->
+        <!-- AIアドバイザー（全幅） -->
+        <button id="ai-btn" onclick="openAIChat()" style="display:none;width:100%;padding:18px;border-radius:22px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;font-size:1.1rem;font-weight:800;cursor:pointer;box-shadow:0 12px 35px rgba(99,102,241,0.35);transition:transform 0.2s;justify-content:center;align-items:center;gap:10px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="9" cy="14" r="1" fill="currentColor"/><circle cx="15" cy="14" r="1" fill="currentColor"/></svg> AIアドバイザーに相談する</button>
+
+        <!-- 2列グリッド：その他機能 -->
         <div id="action-btn-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-            <button id="ai-btn"      onclick="openAIChat()"            style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(99,102,241,0.3);transition:transform 0.15s;">🤖 AIアドバイザー</button>
-            <button id="history-btn" onclick="showHistoryModal()"      style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#ff2d78;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(255,45,120,0.25);transition:transform 0.15s;">📊 診断履歴</button>
-            <button id="speed-btn"   onclick="showSpeedModal()"        style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#7c3aed;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(124,58,237,0.25);transition:transform 0.15s;">🔋 バッテリーテスト</button>
-            <button id="ranking-btn" onclick="openWeeklyRankingModal()" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(245,158,11,0.25);transition:transform 0.15s;">🏆 週間ランキング</button>
-            <button id="particle-diag-btn" onclick="openParticleDiag()" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(167,139,250,0.25);transition:transform 0.15s;">✨ パーティクル診断</button>
+            <button id="history-btn" onclick="showHistoryModal()"      style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#ff2d78;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(255,45,120,0.25);transition:transform 0.15s;" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#ff2d78;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(255,45,120,0.25);transition:transform 0.15s;display:none;align-items:center;justify-content:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> 診断履歴</button>
+            <button id="speed-btn"   onclick="showSpeedModal()"        style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#7c3aed;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(124,58,237,0.25);transition:transform 0.15s;" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:#7c3aed;color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(124,58,237,0.25);transition:transform 0.15s;display:none;align-items:center;justify-content:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="7" y1="10" x2="7" y2="14"/><line x1="11" y1="10" x2="11" y2="14"/></svg> バッテリーテスト</button>
+            <button id="ranking-btn" onclick="openWeeklyRankingModal()" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(245,158,11,0.25);transition:transform 0.15s;" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(245,158,11,0.25);transition:transform 0.15s;display:none;align-items:center;justify-content:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" opacity="0.8"/></svg> 週間ランキング</button>
+            <button id="particle-diag-btn" onclick="openParticleDiag()" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(167,139,250,0.25);transition:transform 0.15s;" style="display:none;width:100%;padding:16px 8px;border-radius:18px;background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff;border:none;font-size:0.88rem;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(167,139,250,0.25);transition:transform 0.15s;display:none;align-items:center;justify-content:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="5" cy="5" r="1.5" fill="currentColor" opacity="0.7"/><circle cx="19" cy="5" r="1.5" fill="currentColor" opacity="0.7"/><circle cx="5" cy="19" r="1.5" fill="currentColor" opacity="0.7"/><circle cx="19" cy="19" r="1.5" fill="currentColor" opacity="0.7"/><circle cx="12" cy="3" r="1.2" fill="currentColor" opacity="0.5"/><circle cx="12" cy="21" r="1.2" fill="currentColor" opacity="0.5"/><circle cx="3" cy="12" r="1.2" fill="currentColor" opacity="0.5"/><circle cx="21" cy="12" r="1.2" fill="currentColor" opacity="0.5"/></svg> パーティクル診断</button>
+        </div>
+
+        <!-- プライベート診断（2列） -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+            <button id="private-diag-btn" onclick="startPrivateDiagnostic()" style="width:100%;padding:14px 8px;border-radius:18px;background:#2a1a3d;color:#a78bfa;border:1px solid #7c3aed66;font-size:0.85rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> プライベート診断</button>
+            <button id="private-history-btn" onclick="showPrivateHistoryModal()" style="width:100%;padding:14px 8px;border-radius:18px;background:#1a1a1a;color:#a78bfa;border:1px solid #7c3aed66;font-size:0.85rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> プライベート履歴</button>
         </div>
 
         <!-- 再診断（全幅） -->
-        <button id="retry-btn" onclick="guardedRetry()" style="display:none;width:100%;padding:18px;border-radius:22px;background:#ff9500;color:#fff;border:none;font-size:1.05rem;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(255,149,0,0.28);transition:transform 0.2s,opacity 0.2s;">🔄 再診断する</button>
+        <button id="retry-btn" onclick="guardedRetry()" style="display:none;width:100%;padding:18px;border-radius:22px;background:#ff9500;color:#fff;border:none;font-size:1.05rem;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(255,149,0,0.28);transition:transform 0.2s,opacity 0.2s;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:5px;"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg>再診断する</button>
 
         <div class="action-zone-footer">
-            <button onclick="openTerms()" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
-                📋 <span id="footer-terms-label">利用規約</span>
+            <button onclick="location.href='terms-of-service.html'" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span id="footer-terms-label">利用規約</span>
+            </button>
+            <button onclick="location.href='privacy-policy.html'" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span id="footer-privacy-label">プライバシー</span>
             </button>
             <button onclick="openFeedback()" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
-                💬 <span id="footer-feedback-label">フィードバック</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span id="footer-feedback-label">フィードバック</span>
             </button>
             <button onclick="document.getElementById('data-manage-modal').style.display='flex'" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
-                💾 <span id="footer-datamgmt-label">データ管理</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <span id="footer-datamgmt-label">データ管理</span>
             </button>
             <button onclick="openDataRestoreGuide()" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
-                📖 <span id="footer-restoreguide-label">復元ガイド</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg>
+                <span id="footer-restoreguide-label">復元ガイド</span>
             </button>
             <button onclick="openHowToUse()" style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:var(--sub-text);font-size:0.8rem;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='var(--text)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--sub-text)'">
-                ❓ <span id="footer-howto-label">使い方</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span id="footer-howto-label">使い方</span>
             </button>
+            <a href="https://lin.ee/uT5Dpwg" target="_blank" rel="noopener" style="background:rgba(6,199,85,0.12);border:1px solid rgba(6,199,85,0.35);color:#06C755;font-size:0.8rem;text-decoration:none;cursor:pointer;padding:7px 16px;border-radius:20px;display:flex;align-items:center;gap:5px;font-weight:700;transition:all 0.2s;" onmouseover="this.style.background='rgba(6,199,85,0.22)'" onmouseout="this.style.background='rgba(6,199,85,0.12)'">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#06C755"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.647 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                <span>公式LINE友だち追加</span>
+            </a>
         </div>
     </div>
 </div>
@@ -821,7 +1028,7 @@
 <!-- 履歴モーダル -->
 <div id="history-modal" class="extra-modal">
     <div class="extra-modal-box">
-        <h2>📊 過去の診断結果（最大3回）</h2>
+        <h2><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> 過去の診断結果（最大3回）</h2>
         <div id="history-content"></div>
         <button class="modal-close-btn" onclick="document.getElementById('history-modal').style.display='none'">閉じる</button>
     </div>
@@ -830,10 +1037,10 @@
 <!-- バッテリードレインテストモーダル -->
 <div id="speed-modal" class="extra-modal">
     <div class="extra-modal-box">
-        <h2>🔋 バッテリードレインテスト</h2>
+        <h2><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="5" y1="10" x2="5" y2="14"/><line x1="9" y1="12" x2="5" y2="12"/></svg> バッテリードレインテスト</h2>
         <p style="color:var(--sub-text);font-size:0.9rem;margin:0 0 18px;">30秒間CPUに負荷をかけ、消費バッテリーからフル負荷時の<strong style="color:#fff;">連続使用可能時間</strong>を推定します。</p>
         <div id="speed-results"></div>
-        <button id="speed-run-btn" onclick="runSpeedTest()" style="width:100%;padding:14px;border-radius:14px;background:#7c3aed;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;margin-bottom:12px;">🔋 テスト開始</button>
+        <button id="speed-run-btn" onclick="runSpeedTest()" style="width:100%;padding:14px;border-radius:14px;background:#7c3aed;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;margin-bottom:12px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="5" y1="10" x2="5" y2="14"/><line x1="9" y1="12" x2="5" y2="12"/></svg> テスト開始</button>
         <button class="modal-close-btn" onclick="document.getElementById('speed-modal').style.display='none'">閉じる</button>
     </div>
 </div>
@@ -843,7 +1050,7 @@
         <p class="modal-hint">プレビューを確認して「画像をダウンロード」を押すか、長押し／右クリックで保存してください</p>
         <div class="modal-actions" style="flex-direction:column;gap:10px;">
             <div style="display:flex;gap:12px;width:100%;">
-                <button id="dl-btn" style="flex:1;">⬇ 画像をダウンロード</button>
+                <button id="dl-btn" style="flex:1;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> 画像をダウンロード</button>
                 <button class="close-btn" onclick="closeModal()" style="flex:1;">診断に戻る</button>
             </div>
             <button id="modal-share-x-btn" onclick="modalShareToX()" style="width:100%;padding:14px;border-radius:14px;background:#000;color:#fff;border:2px solid #fff;font-size:1rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
@@ -877,22 +1084,22 @@
 <div id="howto-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999995;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:540px;max-height:90vh;overflow-y:auto;">
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">❓ 使い方</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 使い方</h2>
             <button onclick="document.getElementById('howto-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="padding:20px 24px;color:#ccc;font-size:0.9rem;line-height:1.8;">
             
             <!-- 診断方法 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">📊 診断する</div>
-                <p style="margin:0;color:#aaa;font-size:0.85rem;">
-                    ページを開くと自動的に診断が開始されます。デバイスの処理速度やバッテリー性能などを計測し、診断は約1分で完了します。<br><strong style="color:#fff;">※ インターネット接続が必須です</strong>
-                </p>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> 診断する</div>
+                <!-- 使い方モーダル：診断する -->
+    ページを開くと自動的に診断が開始されます。デバイスの処理速度やバッテリー性能などを計測し、診断は約30~20秒で完了します。
+</p>
             </div>
 
             <!-- 結果表示 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">🎯 結果を確認</div>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg> 結果を確認</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
                     診断完了後、デバイスランク（S～D）とスコア、詳細な項目別の結果が表示されます。「過去の診断結果を見る」から履歴を確認できます。
                 </p>
@@ -900,7 +1107,7 @@
 
             <!-- 結果共有 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">📤 結果をシェア</div>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> 結果をシェア</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
                     「シェア」ボタンで診断結果を画像化。X（Twitter）などで友人と比較できます。
                 </p>
@@ -908,26 +1115,28 @@
 
             <!-- ランキング参加 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">🏆 ランキング</div>
-                <p style="margin:0;color:#aaa;font-size:0.85rem;">
-                    Pro Ultraなら「週間ランキング参加権」で毎週のランキングに参加。高スコアを目指して競い合えます。<br><strong style="color:#fff;">※ ランキングへの参加には週間ランキング権の購入が必須です</strong>
-                </p>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> ランキング</div>
+                <!-- 使い方モーダル：ランキング -->
+<p style="margin:0;color:#aaa;font-size:0.85rem;">
+    Pro Ultraなら「週間ランキング参加権」で毎週のランキングに参加。高スコアを目指して競い合えます。<br><strong style="color:#fff;">※ ランキングへの参加には週間ランキング権をサイト内ポイントで交換する必要があります</strong>
+</p>
+                
             </div>
 
             <!-- Pro Ultra特典 -->
             <div style="margin-bottom:24px;padding-top:24px;border-top:1px solid #333;">
-                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;">👑 Pro Ultra 特典</div>
+                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"/></svg> Pro Ultra 特典</div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.85rem;">
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #fbbf24;">
-                        <div style="color:#fbbf24;font-weight:700;">📊 30個保存</div>
+                        <div style="color:#fbbf24;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> 30個保存</div>
                         <div style="color:#888;font-size:0.75rem;margin-top:4px;">診断結果を最大30個まで保存可能</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #fbbf24;">
-                        <div style="color:#fbbf24;font-weight:700;">🏆 ランキング</div>
+                        <div style="color:#fbbf24;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> ランキング</div>
                         <div style="color:#888;font-size:0.75rem;margin-top:4px;">週間ランキングに参加して競う</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #fbbf24;">
-                        <div style="color:#fbbf24;font-weight:700;">🎨 カラー設定</div>
+                        <div style="color:#fbbf24;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> カラー設定</div>
                         <div style="color:#888;font-size:0.75rem;margin-top:4px;">見た目をカスタマイズできる</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #fbbf24;">
@@ -939,11 +1148,11 @@
 
             <!-- よくある質問 -->
             <div style="margin-top:24px;padding-top:24px;border-top:1px solid #333;">
-                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;">❓ よくある質問</div>
+                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> よくある質問</div>
                 
                 <div style="margin-bottom:14px;">
                     <div style="color:#fff;font-weight:700;font-size:0.9rem;margin-bottom:6px;">Q: 診断は何回できますか？</div>
-                    <div style="color:#aaa;font-size:0.85rem;">A: 制限なく何度でも診断できます。ただしインターネット接続が必須です。</div>
+                    <div style="color:#aaa;font-size:0.85rem;">A: 制限なく何度でも診断できます。なおインターネット接続がない環境でも一部の診断をすることが可能です。</div>
                 </div>
 
                 <div style="margin-bottom:14px;">
@@ -960,7 +1169,7 @@
             <!-- サポート -->
             <div style="margin-top:24px;padding:16px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:14px;text-align:center;">
                 <div style="color:#a78bfa;font-size:0.85rem;">
-                    📞 問題が発生した場合は<br>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.39 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 問題が発生した場合は<br>
                     <strong style="color:#c4b5fd;">フィードバック機能からお知らせください</strong>
                 </div>
             </div>
@@ -972,7 +1181,7 @@
 <!-- 通知センター -->
 <div id="notif-modal" style="display:none;position:fixed;top:54px;right:12px;width:300px;max-height:440px;background:#111;border:1px solid #2a2a2a;border-radius:20px;z-index:999998;overflow-y:auto;box-shadow:0 12px 40px rgba(0,0,0,0.8);">
     <div style="padding:14px 18px 10px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#111;">
-        <span style="color:#fff;font-size:0.95rem;font-weight:900;">🔔 通知</span>
+        <span style="color:#fff;font-size:0.95rem;font-weight:900;display:flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> 通知</span>
         <button onclick="closeNotifCenter()" style="background:none;border:none;color:#555;font-size:0.8rem;cursor:pointer;">閉じる</button>
     </div>
     <div id="notif-list"></div>
@@ -982,7 +1191,7 @@
 <div id="feedback-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999995;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:520px;">
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 id="feedback-title" style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">💬 フィードバック</h2>
+            <h2 id="feedback-title" style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> フィードバック</h2>
             <button onclick="closeFeedback()" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="padding:20px 24px;">
@@ -992,9 +1201,9 @@
             <div style="margin-bottom:16px;">
                 <label id="feedback-cat-label" style="display:block;color:#ccc;font-size:0.82rem;font-weight:700;margin-bottom:8px;">カテゴリ</label>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;" id="feedback-cats">
-                    <button class="fb-cat active" data-val="bug" onclick="selectFbCat(this)">🐛 バグ報告</button>
-                    <button class="fb-cat" data-val="feature" onclick="selectFbCat(this)">✨ 機能要望</button>
-                    <button class="fb-cat" data-val="other" onclick="selectFbCat(this)">💭 その他</button>
+                    <button class="fb-cat active" data-val="bug" onclick="selectFbCat(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M8 3a2 2 0 0 0-2 2"/><path d="M16 3a2 2 0 0 1 2 2"/><path d="M12 13V7"/><circle cx="12" cy="5" r="2"/><path d="M5 10h14"/><path d="M4 6l2 2"/><path d="M20 6l-2 2"/><path d="M4 18l2-2"/><path d="M20 18l-2-2"/><rect x="6" y="9" width="12" height="12" rx="4"/></svg> バグ報告</button>
+                    <button class="fb-cat" data-val="feature" onclick="selectFbCat(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 機能要望</button>
+                    <button class="fb-cat" data-val="other" onclick="selectFbCat(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> その他</button>
                 </div>
             </div>
 
@@ -1027,7 +1236,7 @@
 <div id="data-manage-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999995;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:520px;">
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">💾 データ管理</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> データ管理</h2>
             <button onclick="document.getElementById('data-manage-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="padding:20px 24px;">
@@ -1035,17 +1244,17 @@
             
             <!-- ダウンロードボタン -->
             <button onclick="downloadStorageData()" style="width:100%;padding:14px;border-radius:14px;background:#007aff;color:#fff;border:none;font-size:0.95rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-bottom:12px;">
-                📥 データをダウンロード
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> データをダウンロード
             </button>
             
             <!-- アップロードボタン -->
             <button onclick="uploadStorageData()" style="width:100%;padding:14px;border-radius:14px;background:#34c759;color:#fff;border:none;font-size:0.95rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;margin-bottom:12px;">
-                📤 データをアップロード
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> データをアップロード
             </button>
             
             <!-- クリアボタン -->
             <button onclick="clearStorageData()" style="width:100%;padding:14px;border-radius:14px;background:#ff3b30;color:#fff;border:none;font-size:0.95rem;font-weight:700;cursor:pointer;transition:opacity 0.2s;">
-                🗑️ データをクリア
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>️ データをクリア
             </button>
             
             <p style="color:#666;font-size:0.75rem;margin:16px 0 0;text-align:center;">※ 管理画面のバナーからもアクセスできます</p>
@@ -1057,14 +1266,14 @@
 <div id="restore-guide-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999995;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
     <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:540px;max-height:90vh;overflow-y:auto;">
         <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">📖 データ復元ガイド</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.5"/></svg> データ復元ガイド</h2>
             <button onclick="document.getElementById('restore-guide-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="padding:20px 24px;color:#ccc;font-size:0.9rem;line-height:1.8;">
             
             <!-- ステップ1 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">1️⃣ ファイルを準備</div>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:7px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#7c3aed;color:#fff;font-size:0.72rem;font-weight:900;flex-shrink:0;">1</span> ファイルを準備</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
                     前のドメインで保存した<br>
                     <code style="background:#000;padding:4px 8px;border-radius:4px;font-family:monospace;color:#ffd700;">pro-ultra-backup-YYYY-MM-DD.json</code><br>
@@ -1074,18 +1283,18 @@
 
             <!-- ステップ2 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">2️⃣ データ管理を開く</div>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:7px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#7c3aed;color:#fff;font-size:0.72rem;font-weight:900;flex-shrink:0;">2</span> データ管理を開く</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
                     ページフッター下部の<br>
-                    <strong style="color:#fff;">「💾 データ管理」</strong>ボタンをタップ
+                    <strong style="color:#fff;">「データ管理」</strong>ボタンをタップ
                 </p>
             </div>
 
             <!-- ステップ3 -->
             <div style="margin-bottom:24px;padding:16px;background:#1a1a2e;border:1px solid #333;border-radius:14px;">
-                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">3️⃣ アップロードを選択</div>
+                <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:7px;"><span style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#7c3aed;color:#fff;font-size:0.72rem;font-weight:900;flex-shrink:0;">3</span> アップロードを選択</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
-                    <strong style="color:#fff;">「📤 データをアップロード」</strong><br>
+                    <strong style="color:#fff;">「<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> データをアップロード」</strong><br>
                     ボタンをタップ
                 </p>
             </div>
@@ -1104,32 +1313,32 @@
                 <div style="color:#7c3aed;font-weight:800;font-size:1rem;margin-bottom:10px;">5️⃣ 復元を実行</div>
                 <p style="margin:0;color:#aaa;font-size:0.85rem;">
                     確認ダイアログで「OK」をタップ<br>
-                    <strong style="color:#34c759;">✅ ページが自動でリロード</strong>
+                    <strong style="color:#34c759;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ページが自動でリロード</strong>
                 </p>
             </div>
 
             <!-- 復元されるデータ -->
             <div style="margin-bottom:24px;padding-top:24px;border-top:1px solid #333;">
-                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;">📋 復元されるデータ</div>
+                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> 復元されるデータ</div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.85rem;">
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #34c759;">
-                        <div style="color:#34c759;font-weight:700;">✅ 診断履歴</div>
+                        <div style="color:#34c759;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 診断履歴</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #34c759;">
-                        <div style="color:#34c759;font-weight:700;">✅ AI会話</div>
+                        <div style="color:#34c759;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> AI会話</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #34c759;">
-                        <div style="color:#34c759;font-weight:700;">✅ スキン設定</div>
+                        <div style="color:#34c759;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> スキン設定</div>
                     </div>
                     <div style="background:#1a1a2e;padding:10px;border-radius:8px;border-left:3px solid #34c759;">
-                        <div style="color:#34c759;font-weight:700;">✅ カラー設定</div>
+                        <div style="color:#34c759;font-weight:700;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> カラー設定</div>
                     </div>
                 </div>
             </div>
 
             <!-- よくある質問 -->
             <div style="margin-top:24px;padding-top:24px;border-top:1px solid #333;">
-                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;">❓ よくある質問</div>
+                <div style="color:#f59e0b;font-weight:800;font-size:0.95rem;margin-bottom:12px;display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> よくある質問</div>
                 
                 <div style="margin-bottom:14px;">
                     <div style="color:#fff;font-weight:700;font-size:0.9rem;margin-bottom:6px;">Q: Pro Ultra購入情報は？</div>
@@ -1150,7 +1359,7 @@
             <!-- サポート -->
             <div style="margin-top:24px;padding:16px;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:14px;text-align:center;">
                 <div style="color:#a78bfa;font-size:0.85rem;">
-                    💬 質問やトラブルがあれば<br>
+                    質問やトラブルがあれば<br>
                     <strong style="color:#c4b5fd;">フィードバック機能からお知らせください</strong>
                 </div>
             </div>
@@ -1169,26 +1378,133 @@
     background:var(--accent);border-color:var(--accent);color:#fff;
 }
 </style>
+<script src="terms-ai-chat.js"></script>
 <script src="script.js"></script>
 
-<!-- ── 利用規約モーダル ── -->
-<div id="terms-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;overflow-y:auto;">
-    <div style="background:#111;border:1px solid #2a2a2a;border-radius:24px;width:100%;max-width:600px;max-height:88vh;overflow-y:auto;padding:0;">
-        <div style="position:sticky;top:0;background:#111;border-radius:24px 24px 0 0;padding:20px 24px 16px;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;z-index:1;">
-            <h2 id="terms-title" style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">📋 利用規約</h2>
-            <button onclick="closeTerms()" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
+<!-- 管理者メール配信モーダル -->
+<div id="admin-email-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:flex-start;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #0ea5e9;border-radius:24px;width:100%;max-width:480px;padding:28px 24px;margin:20px auto;max-height:calc(100vh - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                メール配信
+            </h2>
+            <button onclick="document.getElementById('admin-email-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
-        <div id="terms-body" style="padding:24px;font-size:0.88rem;color:#ccc;line-height:1.9;"></div>
-        <div style="padding:16px 24px 28px;border-top:1px solid #2a2a2a;">
-            <button onclick="closeTerms()" style="width:100%;padding:13px;border-radius:14px;background:#1a1a1a;border:1px solid #333;color:#888;font-size:0.9rem;cursor:pointer;font-weight:700;">閉じる</button>
+        <div id="email-template-selector" style="margin-bottom:14px;"></div>
+        <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">件名</label>
+            <input id="admin-email-subject" type="text" placeholder="例: v1.5.0 アップデートのお知らせ" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.9rem;box-sizing:border-box;">
         </div>
+        <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">本文（HTMLも可）</label>
+            <textarea id="admin-email-body" rows="6" placeholder="例: 新機能を追加しました！&#10;&#10;・〇〇機能&#10;・△△改善" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.88rem;box-sizing:border-box;resize:vertical;line-height:1.7;"></textarea>
+        </div>
+        <div id="admin-email-status" style="font-size:0.85rem;min-height:20px;margin-bottom:12px;"></div>
+        <button onclick="sendAdminEmail()" id="admin-email-send-btn" style="width:100%;padding:14px;border-radius:14px;background:#0ea5e9;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">全ユーザーに送信</button>
     </div>
 </div>
 <!-- 管理者通知送信モーダル -->
-<div id="admin-push-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:center;padding:20px;box-sizing:border-box;">
-    <div style="background:#111;border:1px solid #7c3aed;border-radius:24px;width:100%;max-width:480px;padding:28px 24px;">
+<!-- LINE公式アカウント 一斉配信モーダル -->
+<div id="admin-line-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:flex-start;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:20px;padding:24px 22px;width:100%;max-width:440px;margin:20px auto;max-height:calc(100vh - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:#fff;">🟢 LINE公式アカウント 一斉配信</h3>
+            <button onclick="document.getElementById('admin-line-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#666;font-size:0.8rem;margin:0 0 14px;line-height:1.6;">友だち全員にLINEメッセージを一斉配信します（Broadcast API）。無料プランは月200通までです。</p>
+
+        <div id="admin-line-stats" style="background:#161616;border:1px solid #2a2a2a;border-radius:14px;padding:14px;margin-bottom:16px;font-size:0.82rem;color:#aaa;">
+            読み込み中...
+        </div>
+
+        <textarea id="admin-line-body" rows="6" placeholder="例: v1.5.0 アップデートのお知らせ&#10;&#10;・〇〇機能を追加しました！" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.88rem;box-sizing:border-box;resize:vertical;line-height:1.7;margin-bottom:12px;"></textarea>
+
+        <label style="display:block;color:#888;font-size:0.78rem;margin-bottom:6px;">画像URL（任意・https限定）</label>
+        <input id="admin-line-image-url" type="url" placeholder="https://example.com/image.jpg" style="width:100%;padding:10px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.85rem;box-sizing:border-box;margin-bottom:12px;">
+
+        <label style="display:block;color:#888;font-size:0.78rem;margin-bottom:6px;">動画URL（任意・https限定）</label>
+        <input id="admin-line-video-url" type="url" placeholder="https://example.com/video.mp4" style="width:100%;padding:10px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.85rem;box-sizing:border-box;margin-bottom:12px;">
+
+        <label style="display:block;color:#888;font-size:0.78rem;margin-bottom:6px;">動画サムネイルURL（動画を送る場合は必須・https限定）</label>
+        <input id="admin-line-video-preview-url" type="url" placeholder="https://example.com/thumbnail.jpg" style="width:100%;padding:10px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.85rem;box-sizing:border-box;margin-bottom:12px;">
+
+        <div id="admin-line-status" style="font-size:0.85rem;min-height:20px;margin-bottom:12px;"></div>
+        <button onclick="sendAdminLineMessage()" id="admin-line-send-btn" style="width:100%;padding:14px;border-radius:14px;background:#06C755;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">友だち全員に配信</button>
+    </div>
+</div>
+
+<div id="admin-line-coupon-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:flex-start;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #06C75555;border-radius:20px;padding:24px 22px;width:100%;max-width:420px;margin:20px auto;max-height:calc(100vh - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:#fff;">🎟️ クーポン発行設定</h3>
+            <button onclick="document.getElementById('admin-line-coupon-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#666;font-size:0.8rem;margin:0 0 14px;line-height:1.6;">LINE公式アカウントのクーポン機能で設定する「クーポンコード」と同じ文字列を登録してください。ユーザーがアプリ内でこのコードを入力すると、指定の特典が付与されます（1アカウント1回限り）。複数のコードを同時に有効にできます。</p>
+
+        <div style="font-size:0.82rem;color:#aaa;font-weight:700;margin-bottom:8px;">登録済みのコード</div>
+        <div id="admin-line-coupon-list" style="margin-bottom:18px;max-height:220px;overflow-y:auto;"></div>
+
+        <div style="border-top:1px solid #2a2a2a;padding-top:16px;margin-bottom:6px;font-size:0.82rem;color:#aaa;font-weight:700;">新しいコードを追加</div>
+
+        <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">クーポンコード（LINE側と同じ文字列）</label>
+        <input id="admin-line-coupon-code" type="text" maxlength="20" placeholder="例: GACHA6" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#06C755;font-size:1rem;font-weight:800;letter-spacing:1px;font-family:monospace;box-sizing:border-box;margin-bottom:14px;text-transform:uppercase;">
+
+        <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">付与するガチャ券の枚数（不要なら0）</label>
+        <input id="admin-line-coupon-tickets" type="number" min="0" value="6" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.95rem;box-sizing:border-box;margin-bottom:14px;">
+
+        <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">付与するポイント（不要なら0）</label>
+        <input id="admin-line-coupon-points" type="number" min="0" value="0" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.95rem;box-sizing:border-box;margin-bottom:14px;">
+
+        <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">付与する限定バッジ（任意）</label>
+        <select id="admin-line-coupon-badge" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.9rem;box-sizing:border-box;margin-bottom:14px;">
+            <option value="">（付与しない）</option>
+        </select>
+
+        <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">付与する限定スキン（任意）</label>
+        <select id="admin-line-coupon-skin" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.9rem;box-sizing:border-box;margin-bottom:14px;">
+            <option value="">（付与しない）</option>
+        </select>
+
+        <label style="display:flex;align-items:center;gap:8px;color:#ccc;font-size:0.85rem;margin-bottom:16px;cursor:pointer;">
+            <input id="admin-line-coupon-active" type="checkbox" checked style="width:18px;height:18px;">
+            このクーポンを有効にする
+        </label>
+
+        <label style="display:flex;align-items:center;gap:8px;color:#06C755;font-size:0.85rem;margin-bottom:16px;cursor:pointer;font-weight:700;">
+            <input id="admin-line-coupon-unlock-hidden" type="checkbox" style="width:18px;height:18px;">
+            🎰 隠しガチャの解禁権を付与する
+        </label>
+
+        <div id="admin-line-coupon-status" style="font-size:0.85rem;min-height:20px;margin-bottom:12px;"></div>
+        <button onclick="saveLineCouponConfig()" style="width:100%;padding:14px;border-radius:14px;background:linear-gradient(135deg,#06C755,#04a047);color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">＋ このコードを追加する</button>
+    </div>
+</div>
+
+<div id="admin-anniv4m-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:flex-start;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #2a2a2a;border-radius:20px;padding:24px 22px;width:100%;max-width:480px;margin:20px auto;max-height:calc(100vh - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <h3 style="margin:0;font-size:1.05rem;font-weight:900;color:#fff;">🎊 半年記念 特典設定</h3>
+            <button onclick="document.getElementById('admin-anniv4m-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
+        </div>
+        <p style="color:#666;font-size:0.8rem;margin:0 0 14px;line-height:1.6;">ログインボーナス14日分・スタンプラリー報酬の数値を編集できます。バッジ・スキンの種類自体は変更できません（pt・ガチャ券・レアリティアップ券の数だけ）。</p>
+
+        <div id="admin-anniv4m-status" style="font-size:0.85rem;min-height:20px;margin-bottom:10px;color:#888;">読み込み中...</div>
+
+        <div style="margin-bottom:10px;font-size:0.85rem;font-weight:800;color:#a78bfa;">📅 ログインボーナス（14日分）</div>
+        <div id="admin-anniv4m-loginbonus" style="display:flex;flex-direction:column;gap:6px;margin-bottom:18px;"></div>
+
+        <div style="margin-bottom:10px;font-size:0.85rem;font-weight:800;color:#a78bfa;">🎫 スタンプラリー報酬</div>
+        <div id="admin-anniv4m-stamprally" style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px;"></div>
+
+        <button onclick="saveAnniv4mConfig()" id="admin-anniv4m-save-btn" style="width:100%;padding:14px;border-radius:14px;background:#a78bfa;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">保存する</button>
+    </div>
+</div>
+
+<div id="admin-push-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:999999;justify-content:center;align-items:flex-start;padding:20px;box-sizing:border-box;overflow-y:auto;">
+    <div style="background:#111;border:1px solid #7c3aed;border-radius:24px;width:100%;max-width:480px;padding:28px 24px;margin:20px auto;max-height:calc(100vh - 40px);overflow-y:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
-            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;">🔔 通知を送信</h2>
+            <h2 style="margin:0;font-size:1.1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:7px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg> 通知を送信</h2>
             <button onclick="document.getElementById('admin-push-modal').style.display='none'" style="background:#222;border:none;color:#888;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;">✕</button>
         </div>
         <div style="margin-bottom:14px;">
@@ -1203,8 +1519,17 @@
             <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">本文</label>
             <textarea id="admin-push-body" rows="3" placeholder="例: Release 1.0.3 をリリースしました！" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.95rem;box-sizing:border-box;resize:vertical;"></textarea>
         </div>
+        <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">画像URL（任意・長押しで拡大表示されます）</label>
+            <input id="admin-push-image" type="text" placeholder="例: https://example.com/banner.jpg" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.85rem;box-sizing:border-box;">
+            <div id="admin-push-image-preview" style="margin-top:8px;"></div>
+        </div>
+        <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:0.82rem;color:#888;margin-bottom:6px;font-weight:700;">タップ時の遷移先URL</label>
+            <input id="admin-push-url" type="text" value="https://pro-ultra.pages.dev/" placeholder="例: https://lin.ee/xxxxxxx" style="width:100%;padding:12px 14px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:#fff;font-size:0.85rem;box-sizing:border-box;">
+        </div>
         <div id="admin-push-status" style="font-size:0.85rem;min-height:20px;margin-bottom:12px;"></div>
-        <button onclick="sendAdminPush()" id="admin-push-send-btn" style="width:100%;padding:14px;border-radius:14px;background:#7c3aed;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;">📨 送信する</button>
+        <button onclick="sendAdminPush()" id="admin-push-send-btn" style="width:100%;padding:14px;border-radius:14px;background:#7c3aed;color:#fff;border:none;font-size:1rem;font-weight:800;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/><line x1="2" y1="20" x2="8" y2="14"/><line x1="22" y1="20" x2="16" y2="14"/></svg> 送信する</button>
     </div>
 </div>
 
@@ -1212,6 +1537,18 @@
 const VAPID_PUBLIC_KEY = 'BEx0MTHNWwkUQL8MV7wwccKZx-H33LGCUfOvufdPn_VzC8FcP_XvkhsOCprz8VZA0AOlbkO_mZFqSy2IM49aWcQ';
 const ADMIN_UID = 'Sf3jZHOKsDcZ60pThLq2g0Ov2UA2';
 const PUSH_WORKER = 'https://misty-sun-15e5.yuyusesabuchanneru.workers.dev/';
+
+document.addEventListener('input', (e) => {
+    if (e.target && e.target.id === 'admin-push-image') {
+        const url = e.target.value.trim();
+        const preview = document.getElementById('admin-push-image-preview');
+        if (!preview) return;
+        preview.innerHTML = url
+            ? `<img src="${url}" style="max-width:100%;max-height:120px;border-radius:10px;border:1px solid #333;" onerror="this.style.display='none';document.getElementById('admin-push-image-error').style.display='block';" onload="this.style.display='block';document.getElementById('admin-push-image-error').style.display='none';"><div id="admin-push-image-error" style="display:none;color:#f87171;font-size:0.75rem;margin-top:4px;">画像を読み込めませんでした（URLを確認してください）</div>`
+            : '';
+    }
+});
+
 
 function _urlB64ToU8(b) {
     const p = '='.repeat((4 - b.length % 4) % 4);
@@ -1267,18 +1604,132 @@ async function registerSWAndSubscribe() {
 }
 
 function _checkAdminUI(user) {
-    const existing = document.getElementById('admin-push-btn');
-    if (user && user.uid === ADMIN_UID) {
-        if (!existing) {
-            const btn = document.createElement('button');
-            btn.id = 'admin-push-btn';
-            btn.textContent = '🔔 通知送信';
-            btn.onclick = () => document.getElementById('admin-push-modal').style.display = 'flex';
-            btn.style.cssText = 'position:fixed;bottom:80px;right:16px;z-index:9999;background:#7c3aed;color:#fff;border:none;border-radius:99px;padding:10px 18px;font-size:0.85rem;font-weight:800;cursor:pointer;box-shadow:0 4px 16px rgba(124,58,237,0.5);';
-            document.body.appendChild(btn);
+    // 「通知」ボタンを管理者アカウントの場合のみ「管理者用」ハブに差し替える
+    const notifBtn = document.getElementById('notif-btn');
+    if (notifBtn) {
+        if (user && user.uid === ADMIN_UID) {
+            if (!notifBtn.dataset.adminized) {
+                notifBtn.dataset.origOnclick = notifBtn.getAttribute('onclick') || '';
+                notifBtn.dataset.origHtml = notifBtn.innerHTML;
+                notifBtn.dataset.adminized = '1';
+            }
+            notifBtn.setAttribute('onclick', 'openAdminHub()');
+            notifBtn.style.display = 'flex';
+            notifBtn.title = '管理者用';
+            notifBtn.innerHTML = '⚙️';
+        } else if (notifBtn.dataset.adminized) {
+            notifBtn.setAttribute('onclick', notifBtn.dataset.origOnclick || 'toggleNotifCenter()');
+            notifBtn.innerHTML = notifBtn.dataset.origHtml || '';
+            delete notifBtn.dataset.adminized;
         }
-    } else {
-        if (existing) existing.remove();
+    }
+    // 旧・フローティング「通知送信」「メール配信」ボタンは「管理者用」ハブ（🔔プッシュ通知タブ）に統合済みのため生成しない。
+    // 万が一過去に生成済みであれば片付ける。
+    const oldPush = document.getElementById('admin-push-btn');
+    const oldEmail = document.getElementById('admin-email-btn');
+    if (oldPush) oldPush.remove();
+    if (oldEmail) oldEmail.remove();
+}
+
+function saveEmailLawSettings() {
+    const name = document.getElementById('eml-law-name')?.value.trim() || '';
+    const address = document.getElementById('eml-law-address')?.value.trim() || '';
+    const unsubscribe = document.getElementById('eml-law-unsubscribe')?.value.trim() || '';
+    localStorage.setItem('eml_law_name', name);
+    localStorage.setItem('eml_law_address', address);
+    localStorage.setItem('eml_law_unsubscribe', unsubscribe);
+    const saved = document.getElementById('eml-law-saved');
+    if (saved) { saved.style.display = 'block'; setTimeout(() => saved.style.display = 'none', 2000); }
+}
+
+async function sendAdminEmail() {
+    const subject = document.getElementById('admin-email-subject').value.trim();
+    const bodyText = document.getElementById('admin-email-body').value.trim();
+    const status = document.getElementById('admin-email-status');
+    const btn = document.getElementById('admin-email-send-btn');
+
+    if (!subject) { status.style.color='#f87171'; status.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 件名を入力してください'; return; }
+    if (!bodyText) { status.style.color='#f87171'; status.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 本文を入力してください'; return; }
+
+    btn.disabled = true;
+    btn.textContent = 'メールアドレス取得中...';
+    status.style.color = '#888';
+    status.textContent = '';
+
+    try {
+        // Firestoreから全ユーザーのemailを収集
+        const db = firebase.firestore();
+        const snapshot = await db.collection('emails').get();
+        const emails = [];
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            const email = data.email;
+            if (data.unsubscribed) return;
+            if (email && typeof email === 'string' && email.includes('@')) {
+                emails.push(email);
+            }
+        });
+
+        if (emails.length === 0) {
+            status.style.color = '#f87171';
+            status.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 送信先が見つかりませんでした';
+            btn.disabled = false;
+            btn.textContent = '全ユーザーに送信';
+            return;
+        }
+
+        status.textContent = `${emails.length}件に送信中...`;
+        btn.textContent = '送信中...';
+
+        // 本文をHTMLに変換（改行→<br>）
+        const html = bodyText.startsWith('<') ? bodyText : bodyText.replace(/\n/g, '<br>');
+
+        // 特定電子メール法フッター自動追記 (Firebase から取得)
+        let lawSettings = { senderName: 'ProUltra運営', address: '', unsubscribeUrl: '' };
+        try {
+          const lawDocRef = firebase.firestore().collection('admin_email_settings').doc('law_settings');
+          const lawDocSnap = await lawDocRef.get();
+          if (lawDocSnap.exists) {
+            const data = lawDocSnap.data();
+            lawSettings.senderName = data.senderName || 'ProUltra運営';
+            lawSettings.address = data.address || '';
+            lawSettings.unsubscribeUrl = data.unsubscribeUrl || '';
+          }
+        } catch (e) {
+          console.warn('Failed to load email law settings:', e);
+        }
+        
+        const lawFooter = `
+<hr style="border:none;border-top:1px solid #333;margin:24px 0 16px;">
+<div style="color:#888;font-size:0.78rem;line-height:1.8;">
+  <div>送信者: ${lawSettings.senderName}</div>
+  ${lawSettings.address ? `<div>連絡先: ${lawSettings.address}</div>` : ''}
+  ${lawSettings.unsubscribeUrl ? `<div><a href="${lawSettings.unsubscribeUrl}" style="color:#888;">配信停止はこちら</a></div>` : '<div>配信停止をご希望の場合は、このメールに返信してください。</div>'}
+  <!-- 注: unsubscribeUrl は管理者設定で unsubscribe.html を指定してください（例: https://例のサイト/unsubscribe.html） -->
+</div>`;
+        const htmlWithFooter = html + lawFooter;
+
+        const idToken = await (window._fbAuth || firebase.auth()).currentUser.getIdToken();
+        const res = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ idToken, subject, html: htmlWithFooter, emails })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+            status.style.color = '#34d399';
+            status.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ${data.sent}件送信完了（失敗:${data.failed}件）`;
+        } else {
+            status.style.color = '#f87171';
+            status.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ' + (data.error || res.status);
+        }
+    } catch (e) {
+        status.style.color = '#f87171';
+        status.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ' + String(e);
+    } finally {
+        btn.disabled = false;
+        btn.textContent = '全ユーザーに送信';
     }
 }
 
@@ -1286,16 +1737,19 @@ async function sendAdminPush() {
     const title     = document.getElementById('admin-push-title').value.trim();
     const body      = document.getElementById('admin-push-body').value.trim();
     const targetUid = document.getElementById('admin-push-uid').value.trim();
+    const imageUrl  = document.getElementById('admin-push-image').value.trim();
+    const destUrl   = document.getElementById('admin-push-url').value.trim() || 'https://pro-ultra.pages.dev/';
     const status = document.getElementById('admin-push-status');
     const btn    = document.getElementById('admin-push-send-btn');
-    if (!body) { status.style.color='#f87171'; status.textContent='⚠️ 本文を入力してください'; return; }
+    if (!body) { status.style.color='#f87171'; status.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 本文を入力してください'; return; }
     btn.disabled = true; btn.textContent = '送信中...';
     status.style.color = '#888';
-    status.textContent = targetUid ? `🎯 UID: ${targetUid.slice(0,8)}... に送信中` : '送信中...';
+    status.innerHTML = targetUid ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg> UID: ${targetUid.slice(0,8)}... に送信中` : '送信中...';
 
     try {
-        const payload = { title, body, url: 'https://pro-ultra.pages.dev/', adminUid: ADMIN_UID };
+        const payload = { title, body, url: destUrl, adminUid: ADMIN_UID };
         if (targetUid) payload.targetUid = targetUid;
+        if (imageUrl) payload.image = imageUrl;
         const res = await fetch(PUSH_WORKER, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -1306,17 +1760,17 @@ async function sendAdminPush() {
         if (res.ok) {
             const total = data.total != null ? `（対象:${data.total}件）` : '';
             status.style.color = '#34d399';
-            status.textContent = `✅ ${data.sent}件送信完了（失敗:${data.failed}件）${total}`;
+            status.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ${data.sent}件送信完了（失敗:${data.failed}件）${total}`;
         } else {
             status.style.color = '#f87171';
-            status.textContent = '❌ ' + (data.error || res.status);
+            status.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ' + (data.error || res.status);
         }
     } catch(e) {
         status.style.color = '#f87171';
-        status.textContent = '❌ ' + e.message;
+        status.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ' + e.message;
         console.error('[AdminPush] fetch error:', e);
     }
-    btn.disabled = false; btn.textContent = '📨 送信する';
+    btn.disabled = false; btn.textContent = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/><line x1="2" y1="20" x2="8" y2="14"/><line x1="22" y1="20" x2="16" y2="14"/></svg> 送信する';
 }
 
 // Firebase初期化完了後にSW登録（initFirebase内から呼ばれる）

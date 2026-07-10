@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約・プライバシーポリシー｜精密デバイス診断 Pro Ultra</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111;
+      --border: #1e1e1e;
+      --text: #e0e0e0;
+      --text-muted: #888;
+      --text-dim: #555;
+      --accent: #6366f1;
+      --accent2: #a78bfa;
+      --warning: #ff9500;
+      --danger: #ff6b6b;
+      --success: #34c759;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    .site-header {
+      background: rgba(5,5,5,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .site-title {
+      font-size: 0.9rem;
+      font-weight: 900;
+      color: #fff;
+    }
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .page-hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-hero .icon { font-size: 3rem; margin-bottom: 12px; }
+    .page-hero h1 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .page-hero p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .toc h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { margin-bottom: 6px; }
+    .toc a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .toc a:hover { text-decoration: underline; }
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .section-badge {
+      display: inline-block;
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--accent2);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .section h2 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #ddd;
+      margin: 22px 0 8px;
+    }
+    .section h3:first-of-type { margin-top: 0; }
+    .section p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 12px;
+    }
+    .section ul {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    .section li { margin-bottom: 6px; }
+    .highlight-box {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 0.85rem;
+    }
+    .highlight-warning {
+      background: rgba(255,149,0,0.1);
+      border: 1px solid rgba(255,149,0,0.3);
+      color: var(--warning);
+    }
+    .highlight-danger {
+      background: rgba(255,107,107,0.1);
+      border: 1px solid rgba(255,107,107,0.3);
+      color: var(--danger);
+      font-weight: 700;
+    }
+    .highlight-info {
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--accent2);
+    }
+    .highlight-success {
+      background: rgba(52,199,89,0.1);
+      border: 1px solid rgba(52,199,89,0.3);
+      color: var(--success);
+    }
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .meta-row span {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .back-top {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+    .back-top:hover { color: var(--accent2); }
+    @media (max-width: 600px) {
+      .section { padding: 22px 18px; }
+      .page-hero h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <span class="site-title">📱 精密デバイス診断 Pro Ultra</span>
+  <a href="index.html">← アプリに戻る</a>
+</header>
+
+<div class="container">
+  <div class="page-hero">
+    <div class="icon">📋</div>
+    <h1>利用規約・プライバシーポリシー</h1>
+    <p>最終更新：2026年6月19日 ｜ 精密デバイス診断 Pro Ultra Release 1.2.3.7</p>
+  </div>
+
+  <!-- 目次 -->
+  <div class="toc">
+    <h2>目次</h2>
+    <ul>
+      <li><a href="#terms">📋 利用規約</a></li>
+      <li style="padding-left:16px;"><a href="#terms-1">第1条：推奨環境</a></li>
+      <li style="padding-left:16px;"><a href="#terms-2">第2条：取得情報</a></li>
+      <li style="padding-left:16px;"><a href="#terms-3">第3条：IPアドレスの取り扱い</a></li>
+      <li style="padding-left:16px;"><a href="#terms-4">第4条：診断結果の正確性</a></li>
+      <li style="padding-left:16px;"><a href="#terms-5">第5条：免責事項</a></li>
+      <li style="padding-left:16px;"><a href="#terms-6">第6条：規約の変更</a></li>
+      <li style="padding-left:16px;"><a href="#terms-7">第7条：コード・コンテンツの無断使用禁止</a></li>
+      <li style="padding-left:16px;"><a href="#terms-8">第8条：禁止行為 🆕</a></li>
+      <li style="padding-left:16px;"><a href="#terms-9">第9条：虚偽情報拡散・業務妨害について 🆕</a></li>
+      <li style="padding-left:16px;"><a href="#terms-10">第10条：ログイン機能について 🆕</a></li>
+      <li><a href="#privacy">🔒 プライバシーポリシー</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-1">第1条：収集する情報</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-2">第2条：情報の利用目的</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-3">第3条：第三者への提供</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-4">第4条：アカウント情報・Firebaseについて</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-5">第5条：Cookieおよびローカルストレージ</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-6">第6条：お子様のプライバシー</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-7">第7条：ユーザーの権利</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-8">第8条：プライバシーポリシーの変更</a></li>
+      <li style="padding-left:16px;"><a href="#privacy-9">第9条：お問い合わせ</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== 利用規約 ===== -->
+  <div class="section" id="terms">
+    <div class="section-badge">Terms of Use</div>
+    <h2>📋 利用規約</h2>
+    <p>本ウェブアプリ（以下「本サービス」）をご利用いただく前に、以下の利用規約をよくお読みください。「診断を開始する」ボタンを押した時点で、本規約に同意したものとみなします。</p>
+
+    <h3 id="terms-1">第1条：推奨環境</h3>
+    <p>推奨ブラウザは <strong style="color:#34c759;">Google Chrome</strong> です。Safari（特にiOS Safari）では、一部機能（音声・通知・WebGL等）が正常に動作しない場合があります。Safari以外のブラウザの使用を推奨します。</p>
+
+    <h3 id="terms-2">第2条：取得情報について</h3>
+    <p>本サービスは、診断のためにデバイスのハードウェア情報・ブラウザ情報・IPアドレス等を取得します。これらの情報はすべてブラウザ内のみで処理され、当サービスのサーバーには送信されません。ただし、IP取得のため外部API（ipify.org）への通信が発生します。</p>
+
+    <h3 id="terms-3">第3条：IPアドレスの取り扱い</h3>
+    <p>本サービスでは、WebRTCおよび外部APIを通じてIPアドレスを取得・表示します。</p>
+    <div class="highlight-warning">⚠️ スクリーンショットにIPアドレスを含めてSNS等に公開した場合、おおよその居住地域や利用プロバイダが特定される危険があります。</div>
+    <div class="highlight-danger">❌ これにより損害が生じた場合でも、本ウェブアプリおよびその開発者は一切の責任を負いません。IPアドレスの公開には十分ご注意ください。</div>
+    <p>利用者が本サービス上に表示された情報（IPアドレス、通信情報、デバイス情報等）を、自らSNS、動画投稿サイト、掲示板、その他第三者に公開した場合、それに起因して発生した損害・トラブルについて、開発者は一切責任を負いません。</p>
+
+    <h3 id="terms-4">第4条：診断結果の正確性</h3>
+    <p>本サービスの診断結果はブラウザAPIから取得した推定値であり、実際のハードウェアスペックと異なる場合があります。診断結果の正確性を保証するものではありません。</p>
+
+    <h3 id="terms-5">第5条：免責事項</h3>
+    <p>本サービスの「バッテリードレインテスト」機能は、診断のため利用者の判断により実行する機能であり、実行中は一時的にCPU等へ高負荷処理を行います。バッテリーが劣化している端末や古いデバイスでは、発熱・バッテリー消耗・動作遅延が通常より大きくなる場合があるため、当該端末でのバッテリードレインテストの実行は推奨しません。利用者は内容を理解のうえ、自己責任において実行するものとします。</p>
+    <p>なお、FPS計測など本サービスのその他の診断機能は通常利用の範囲内の負荷であり、特別な注意を要するものではありません。</p>
+    <p>本サービスの利用により生じた損害（データ損失・プライバシー侵害・機器の不具合等）について、開発者は一切の責任を負いません。自己責任のもとでご利用ください。</p>
+    <p>ブラウザ拡張機能、広告ブロッカー、VPN、プロキシ、セキュリティソフト、OS設定、その他第三者ソフトウェアまたは利用環境によって発生した不具合、表示異常、動作停止について、開発者は責任を負いません。</p>
+    <p>ブラウザ、OS、端末固有仕様により、一部機能が正常に動作しない場合があります。また、ブラウザ提供者による警告表示、アクセス制限、独自セキュリティ判定等について、開発者は責任を負いません。</p>
+
+    <h3 id="terms-6">第6条：規約の変更について</h3>
+    <p>大きな変更のときはアプリ内のアップデート情報でお知らせします。規約変更後、利用者が「診断を開始する」ボタンを押した時点で、変更後の規約に同意したものとみなします。</p>
+
+    <h3 id="terms-7">第7条：コード・コンテンツの無断使用禁止</h3>
+    <div class="highlight-info" style="margin-bottom:14px;">📅 2026年6月19日 更新</div>
+    <p>本サービスのソースコード・デザイン・文章・ロジック・UIコンポーネント等のコンテンツは、すべて開発者に帰属します。</p>
+    <div class="highlight-danger">🚫 当サイトのコードを他サイト・他サービス・個人プロジェクト等に無断で利用・引用・転載・複製・改変することを固く禁じます。</div>
+    <ul>
+      <li>部分的な引用・参照であっても、事前に書面による明示的な許可を得ていない場合は禁止されます。</li>
+      <li>本サービスのコードを参考にした類似サービスの公開も禁止します。</li>
+      <li>違反が確認された場合は、警告・削除要請を含む対応を行い、悪質な場合には法的措置（著作権侵害に基づく損害賠償請求等）を取る場合があります。</li>
+    </ul>
+    <p>ブラウザの開発者ツール（DevTools）、ソースコード表示機能、通信解析ツール等を通じて閲覧可能なコードについても、著作権は開発者に帰属します。</p>
+    <p>閲覧可能であることは、複製、転載、再配布、改変、類似サービス制作を許可するものではありません。</p>
+    <div class="highlight-warning">🤖 本サービスのソースコード、アルゴリズム、UI構成、デザイン、文章、ロジックその他一切のコンテンツについて、生成AI、機械学習モデル、AI crawler、自動収集プログラム等による学習・収集・解析・再利用を禁止します。開発者の事前許可なくAI学習データセットへ組み込むことを禁止します。</div>
+    <p>ご利用・コラボレーションのご相談は、フィードバックフォームよりお問い合わせください。</p>
+
+    <h3 id="terms-8">第8条：禁止行為 🆕</h3>
+    <div class="highlight-info" style="margin-bottom:14px;">📅 2026年6月19日 追加</div>
+    <p>本サービスのご利用にあたり、以下の行為を禁止します：</p>
+    <ul>
+      <li>自動アクセス、bot、スクレイピング等による大量アクセス</li>
+      <li>許可されていない自動データ収集</li>
+      <li>意図的な負荷試験</li>
+      <li>不正アクセス行為</li>
+      <li>通信改変、脆弱性調査、内部構造解析</li>
+      <li>その他本サービスの正常な運営を妨害する行為</li>
+    </ul>
+
+    <h3 id="terms-9">第9条：虚偽情報拡散・業務妨害について 🆕</h3>
+    <div class="highlight-info" style="margin-bottom:14px;">📅 2026年6月19日 追加</div>
+    <p>本サービスに関して、虚偽情報の拡散、事実に反する危険性の断定、業務妨害目的の通報、風評被害を目的とした投稿、開発者または本サービスの名誉を毀損する行為が確認された場合、開発者は法的措置を含む対応を行う場合があります。</p>
+    <p>内容が事実に反することを認識しながら、または事実関係を確認することなく、検索エンジンや関係機関等へ不当な通報・報告を行う行為についても、上記と同様に扱います。なお、利用者が事実に基づいて行う通報・指摘・批判等の正当な行為は、本条の対象ではありません。</p>
+
+    <h3 id="terms-10">第10条：ログイン機能について 🆕</h3>
+    <div class="highlight-info" style="margin-bottom:14px;">📅 2026年6月19日 追加</div>
+    <p>ログイン機能は任意機能です。ログインを行わない場合でも一部機能は利用できます。利用者は自己の意思でログイン機能を選択するものとします。</p>
+
+    <div class="meta-row">
+      <span>最終更新：2026年6月19日</span>
+      <span>精密デバイス診断 Release 1.2.3.7</span>
+    </div>
+  </div>
+
+  <!-- ===== プライバシーポリシー ===== -->
+  <div class="section" id="privacy">
+    <div class="section-badge">Privacy Policy</div>
+    <h2>🔒 プライバシーポリシー</h2>
+    <p>精密デバイス診断 Pro Ultra（以下「本サービス」）は、ユーザーのプライバシーを尊重します。本プライバシーポリシーは、本サービスが収集する情報の種類・利用目的・管理方法について説明するものです。</p>
+    <div class="highlight-success">✅ 本サービスの診断処理はすべてブラウザ内のみで行われます。診断データは外部サーバーに送信されません。</div>
+
+    <h3 id="privacy-1">第1条：収集する情報</h3>
+    <p>本サービスが取得する情報は以下の通りです：</p>
+    <ul>
+      <li><strong>デバイス・ハードウェア情報</strong>：CPUコア数、RAM容量、GPU情報、ディスプレイ解像度・リフレッシュレート等</li>
+      <li><strong>ブラウザ情報</strong>：ユーザーエージェント、WebGL対応状況、言語設定、Cookie・IndexedDB対応状況</li>
+      <li><strong>ネットワーク情報</strong>：WebRTCによるローカルIP、外部API（ipify.org）による公開IPアドレス、接続速度・遅延</li>
+      <li><strong>パフォーマンス計測値</strong>：FPS、CPU/GPUスコア、メモリ帯域等の実測ベンチマーク結果</li>
+      <li><strong>バッテリー情報</strong>（対応ブラウザのみ）：残量・充電状態</li>
+    </ul>
+    <div class="highlight-info">ℹ️ 上記のデータはすべてブラウザ内でのみ処理されます。診断結果として表示するためにのみ使用され、当サービスのサーバーに送信・保存されることはありません。</div>
+
+    <h3 id="privacy-2">第2条：情報の利用目的</h3>
+    <p>取得した情報は以下の目的に限り使用されます：</p>
+    <ul>
+      <li>デバイスのハードウェア性能を診断・スコアリングして結果を表示するため</li>
+      <li>診断履歴をブラウザのlocalStorageに保存し、過去の結果と比較するため</li>
+      <li>アプリ設定（言語・フォント・テーマ等）を保持するため</li>
+      <li>フィードバック送信時にデバイス情報を任意で添付するため（ユーザーの許可制）</li>
+      <li>クラウド同期機能（ログイン時）：診断履歴をFirestore（Google Firebase）に保存するため</li>
+    </ul>
+
+    <h3 id="privacy-3">第3条：第三者への情報提供</h3>
+    <p>本サービスは、以下の場合を除き、ユーザーの情報を第三者に提供しません：</p>
+    <ul>
+      <li><strong>ipify.org</strong>：公開IPアドレス取得のため、HTTPSリクエストを送信します（IP以外の情報は送信されません）</li>
+      <li><strong>Formspree（formspree.io）</strong>：フィードバック送信機能を利用した場合のみ、入力内容をFormspreeのサーバーに送信します</li>
+      <li><strong>Google Firebase</strong>：ログイン機能・クラウド同期を利用した場合、認証情報・診断履歴をFirebaseに保存します（詳細は第4条参照）</li>
+      <li><strong>法令に基づく開示</strong>：法律・裁判所命令等により開示が必要と判断された場合</li>
+    </ul>
+    <p>それ以外の第三者への個人情報の販売・提供は一切行いません。広告ネットワーク等によるトラッキングも実施していません。</p>
+
+    <h3 id="privacy-4">第4条：アカウント情報・Firebase について</h3>
+    <p>本サービスのログイン機能には <strong>Google Firebase Authentication</strong> および <strong>Cloud Firestore</strong> を使用しています。</p>
+    <ul>
+      <li>Googleアカウント・GitHubアカウント・Twitterアカウント・メールアドレスでのログインに対応しています</li>
+      <li>ログイン時にFirebase AuthenticationによりUID・表示名・プロフィール画像URL等が取得・管理されます</li>
+      <li>ログイン中は診断履歴・ポイント・設定等がCloud Firestoreに保存・同期されます</li>
+      <li>Firebaseのデータ取り扱いについては、<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" style="color:var(--accent2);">Google Firebaseプライバシーポリシー</a> をご参照ください</li>
+    </ul>
+    <p>ユーザーはログイン機能を利用することにより、Google、GitHub、その他認証プロバイダーを通じて認証情報が取得・処理されることに同意したものとみなします。</p>
+    <div class="highlight-info">🔐 ログイン時に表示される同意画面にて、プライバシーポリシーと利用規約への同意を確認しています。</div>
+
+    <h3 id="privacy-5">第5条：Cookie およびローカルストレージ</h3>
+    <p>本サービスは以下の目的でブラウザのストレージ機能を使用します：</p>
+    <ul>
+      <li><strong>localStorage</strong>：診断履歴・アプリ設定・同意状態・ポイント等をブラウザ内に保存します。サーバーには送信されません。</li>
+      <li><strong>sessionStorage</strong>：一時的なセッション情報の保持に使用する場合があります。</li>
+      <li><strong>Cookie</strong>：Firebase Authentication のセッション管理のためにCookieが使用される場合があります。</li>
+    </ul>
+    <p>ブラウザの設定でlocalStorageやCookieを無効にすると、一部機能が正常に動作しない場合があります。</p>
+    <p>localStorage および sessionStorage に保存されるデータは利用者自身のブラウザ内に保存されるものであり、開発者のサーバーには送信されません。これらのデータ削除は利用者自身がブラウザ設定から行うものとします。</p>
+
+    <h3 id="privacy-6">第6条：お子様のプライバシー</h3>
+    <p>本サービスは13歳未満のお子様を対象としておらず、意図的に13歳未満の個人情報を収集することはありません。13歳未満のお子様が本サービスを通じて個人情報を提供されたと保護者が気づいた場合は、フィードバック機能よりご連絡ください。</p>
+    <p>13歳未満の利用者が保護者の同意なく利用したことにより発生した問題について、開発者は責任を負いません。保護者は13歳未満の利用者による利用について適切な監督を行うものとします。</p>
+
+    <h3 id="privacy-7">第7条：ユーザーの権利</h3>
+    <p>ユーザーは以下の権利を有します：</p>
+    <ul>
+      <li><strong>データの確認</strong>：保存されているデータはブラウザのlocalStorage（診断履歴・設定）またはFirestoreアカウント内で確認できます</li>
+      <li><strong>データの削除</strong>：ブラウザの「サイトデータを消去」機能でlocalStorageのデータを削除できます。アカウントデータの削除はログイン後のアカウント設定から行えます</li>
+      <li><strong>ログアウト</strong>：いつでもアプリ内の「ログアウト」ボタンからログアウトできます</li>
+    </ul>
+    <p>ログイン機能利用時に保存されるアカウントデータについては、利用者自身がアカウント設定画面から削除できます。ブラウザ内保存データについては、利用者自身がブラウザ設定から削除してください。</p>
+
+    <h3 id="privacy-8">第8条：プライバシーポリシーの変更</h3>
+    <p>本プライバシーポリシーは必要に応じて更新することがあります。重大な変更が生じた場合は、アプリ内の更新通知にてお知らせします。変更後も引き続き本サービスをご利用いただいた場合、変更後のプライバシーポリシーに同意したものとみなします。</p>
+
+    <h3 id="privacy-9">第9条：お問い合わせ</h3>
+    <p>本プライバシーポリシーに関するご質問・ご懸念がある場合は、アプリ内のフィードバック機能（📨 フィードバック）よりお問い合わせください。</p>
+
+    <div class="meta-row">
+      <span>制定：2026年6月19日</span>
+      <span>精密デバイス診断 Release 1.2.3.7</span>
+    </div>
+  </div>
+
+  <a href="#" class="back-top">↑ ページ上部へ戻る</a>
+</div>
+
+<script>
+  // URLハッシュで該当セクションにスクロール
+  if (location.hash) {
+    setTimeout(() => {
+      const el = document.querySelector(location.hash);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+</script>
+
+</body>
+</html>
